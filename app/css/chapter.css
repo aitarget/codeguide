@@ -20,6 +20,7 @@
 
   @media (--viewport-large) {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -54,4 +55,12 @@
 
 .gray-bgcolor {
   background-color: var(--light-subtle-color);
+}
+
+.text-bold {
+  font-weight: 800;
+}
+
+.text-center {
+  text-align: center;
 }

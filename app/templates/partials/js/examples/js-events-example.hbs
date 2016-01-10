@@ -1,0 +1,19 @@
+/* Плохо */
+$(this).trigger('listingUpdated', listing.id);
+
+...
+
+$(this).on('listingUpdated', function(e, listingId) {
+     //делаем что-нибудь с listing, например:
+     listing.name = listings[listingId]
+});
+
+
+/* Хорошо */
+$(this).trigger('listingUpdated', { listingId : listing.id });
+
+...
+
+$(this).on('listingUpdated', function(e, data) {
+  // делаем что-нибудь с data.listingId
+});

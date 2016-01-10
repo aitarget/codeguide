@@ -1,0 +1,11 @@
+var len = items.length,
+    itemsCopy = [],
+    i;
+
+/* Плохо */
+for (i = 0; i < len; i++) {
+  itemsCopy[i] = items[i];
+}
+
+/* Хорошо */
+itemsCopy = items.slice();

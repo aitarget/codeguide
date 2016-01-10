@@ -1,0 +1,70 @@
+/* Плохо */
+// make() возвращает новый элемент
+// основываясь на получаемом имени тэга
+//
+// @param <String> tag
+// @return <Element> element
+function make(tag) {
+
+  // ...создаем element...
+
+  return element;
+}
+
+/* Хорошо */
+/**
+ * make() возвращает новый элемент
+ * основываясь на получаемом имени тэга
+ *
+ * @param <String> tag
+ * @return <Element> element
+ */
+function make(tag) {
+
+  // ...создаем element...
+
+  return element;
+}
+
+/* Плохо */
+var active = true;  // устанавливаем активным элементом
+
+/* Хорошо */
+// устанавливаем активным элементом
+var active = true;
+
+/* Плохо */
+function getType() {
+  console.log('проверяем тип...');
+  // задаем тип по умолчанию 'no type'
+  var type = this._type || 'no type';
+
+  return type;
+}
+
+/* Хорошо */
+function getType() {
+  console.log('проверяем тип...');
+
+  // задаем тип по умолчанию 'no type'
+  var type = this._type || 'no type';
+
+  return type;
+}
+
+
+function Calculator() {
+
+  // TODO FIXME: тут не нужно использовать глобальную переменную
+  total = 0;
+
+  return this;
+}
+
+function Calculator() {
+
+  // TODO: должна быть возможность изменять значение через параметр функции
+  this.total = 0;
+
+  return this;
+}

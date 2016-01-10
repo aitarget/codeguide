@@ -1,0 +1,83 @@
+/* Плохо */
+var items = getItems();
+var goSportsTeam = true;
+var dragonball = 'z';
+
+/* Хорошо */
+var items = getItems(),
+    goSportsTeam = true,
+    dragonball = 'z';
+
+
+/* Плохо */
+var i, len, dragonball,
+    items = getItems(),
+    goSportsTeam = true;
+
+/* Плохо */
+var i, items = getItems(),
+    dragonball,
+    goSportsTeam = true,
+    len;
+
+/* Хорошо */
+var items = getItems(),
+    goSportsTeam = true,
+    dragonball,
+    length,
+    i;
+
+
+/* Плохо */
+function () {
+  test();
+  console.log('Делаю что-нибудь..');
+
+  //..или не делаю...
+
+  var name = getName();
+
+  if (name === 'test') {
+    return false;
+  }
+
+  return name;
+}
+
+/* Хорошо */
+function() {
+  var name = getName();
+
+  test();
+  console.log('Делаю что-то полезное..');
+
+  //..продолжаю приносить пользу людям..
+
+  if (name === 'test') {
+    return false;
+  }
+
+  return name;
+}
+
+/* Плохо */
+function() {
+  var name = getName();
+
+  if (!arguments.length) {
+    return false;
+  }
+
+  return true;
+}
+
+/* Хорошо */
+function() {
+  if (!arguments.length) {
+    return false;
+  }
+
+  var name = getName();
+
+  return true;
+}

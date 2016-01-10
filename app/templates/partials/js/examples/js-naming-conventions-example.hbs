@@ -1,0 +1,88 @@
+/* Плохо */
+function q() {
+  // ...код...
+}
+
+/* Хорошо */
+function query() {
+  // ...код...
+}
+
+
+/* Плохо */
+var OBJEcttsssss = {};
+var this_is_my_object = {};
+function c() {};
+var u = new user({
+  name: 'Bob Parr'
+});
+
+/* Хорошо */
+var thisIsMyObject = {};
+function thisIsMyFunction() {};
+var user = new User({
+  name: 'Bob Parr'
+});
+
+/* Плохо */
+function user(options) {
+  this.name = options.name;
+}
+
+var bad = new user({
+  name: 'Плохиш'
+});
+
+/* Хорошо */
+function User(options) {
+  this.name = options.name;
+}
+
+var good = new User({
+  name: 'Кибальчиш'
+});
+
+/* Плохо */
+this.__firstName__ = 'Panda';
+this.firstName_ = 'Panda';
+
+/* Хорошо */
+this._firstName = 'Panda';
+
+
+
+function Rocket() {}
+
+// ...
+
+Rocket.prototype.startMessage = 'Houston, I\'m flying into space!';
+
+/* Плохо */
+Rocket.prototype.start = function () {
+  var _this = this;
+
+  _this.lightsCameraAction(function () {
+    console.log(_this.startMessage);
+  });
+};
+
+/* Хорошо */
+Rocket.prototype.start = function () {
+  var rocket = this;
+
+  rocket.lightsCameraAction(function () {
+    console.log(rocket.startMessage);
+  });
+};
+
+
+
+/* Плохо */
+var log = function(msg) {
+  console.log(msg);
+};
+
+/* Хорошо */
+var log = function log(msg) {
+  console.log(msg);
+};

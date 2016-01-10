@@ -1,0 +1,37 @@
+/* Плохо */
+dragon.age();
+
+/* Хорошо */
+dragon.getAge();
+
+/* Плохо */
+dragon.age(25);
+
+/* Хорошо */
+dragon.setAge(25);
+
+
+/* Плохо */
+if (!dragon.age()) {
+  return false;
+}
+
+/* Хорошо */
+if (!dragon.hasAge()) {
+  return false;
+}
+
+
+function Jedi(options) {
+  options || (options = {});
+  var lightsaber = options.lightsaber || 'blue';
+  this.set('lightsaber', lightsaber);
+}
+
+Jedi.prototype.set = function(key, val) {
+  this[key] = val;
+};
+
+Jedi.prototype.get = function(key) {
+  return this[key];
+};

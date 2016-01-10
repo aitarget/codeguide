@@ -1,0 +1,11 @@
+/* Плохо */
+.block
+	+below(666px)
+		&:first-child
+			margin-top: 5px
+
+/* Хорошо */
+.block
+	&:first-child
+		+below(666px)
+			margin-top: 5px

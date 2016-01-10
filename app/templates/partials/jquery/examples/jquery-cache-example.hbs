@@ -1,0 +1,22 @@
+/* Плохо */
+function setSidebar() {
+  $('#sidebar').hide();
+
+  // ...код...
+
+  $('#sidebar').css({
+    backgroundColor: 'pink'
+  });
+}
+
+/* Хорошо */
+function setSidebar() {
+  var $sidebar = $('#sidebar');
+  $sidebar.hide();
+
+  // ...код...
+
+  $sidebar.css({
+    backgroundColor: 'pink'
+  });
+}

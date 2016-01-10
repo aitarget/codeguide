@@ -1,7 +1,7 @@
 @import "normalize.css";
 @import "variables.css";
 
-@import "prismjs-default-theme/prism-default.css";
+@import "prismjs/themes/prism.css";
 
 @import "general.css";
 @import "prism.css";

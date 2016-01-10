@@ -1,69 +1,122 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>Стиль кода Академии HTML</title>
+    <title>Стиль кода Aitarget</title>
     <link rel="stylesheet" href="{{resolve 'style.css'}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@htmlacademy_ru">
-    <meta name="twitter:image" content="https://htmlacademy.github.io/codeguide/img/og.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://htmlacademy.github.io/codeguide/">
-    <meta property="og:title" itemprop="name" content="Стиль кода Академии HTML">
-    <meta property="og:image" itemprop="image" content="https://htmlacademy.github.io/codeguide/img/og.png">
-    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-29640059-7','auto');ga('send','pageview');</script>
-  </head>
-  <body>
+</head>
+<body>
 
-    <main>
-      {{~> header ~}}
+<main>
+    {{~> header ~}}
 
-      <section class="chapter">
+    <section class="chapter">
         <h2>Оглавление</h2>
         <article class="chapter-part">
-          <div class="chapter-part-col">
-            <h4>HTML</h4>
-            <ul>
-              <li><a href="#html-syntax">Синтаксис</a></li>
-              <li><a href="#html-validator">Валидность</a></li>
-              <li><a href="#html-doctype">HTML-доктайп</a></li>
-              <li><a href="#html-encoding">Кодировка символов</a></li>
-              <li><a href="#html-style-includes">Подключение стилей</a></li>
-              <li><a href="#html-js-includes">Подключение скриптов</a></li>
-              <li><a href="#html-attribute-order">Порядок атрибутов</a></li>
-              <li><a href="#html-boolean">Логические атрибуты</a></li>
-              <li><a href="#html-form-labels">Подписи полей ввода</a></li>
-              <li><a href="#html-img-sizes">Размеры картинок</a></li>
-              <li><a href="#html-language">Атрибут языка</a></li>
-            </ul>
-          </div>
-          <div class="chapter-part-col">
-            <h4>CSS</h4>
-            <ul>
-              <li><a href="#css-syntax">Синтаксис</a></li>
-              <li><a href="#css-order">Порядок свойств</a></li>
-              <li><a href="#css-class-names">Имена классов</a></li>
-              <li><a href="#css-import">Правило @import</a></li>
-              <li><a href="#css-font-variant">Варианты шрифта</a></li>
-            </ul>
-          </div>
+            <div class="chapter-part-col">
+                <h4>Jade</h4>
+                <ul>
+                    <li><a href="#jade-classes-ids">Классы и идентификаторы пишутся в начале</a></li>
+                    <li><a href="#jade-comments">Комментарии</a></li>
+                    <li><a href="#jade-inline-elements">Строчные элементы</a></li>
+                    <li><a href="#jade-linewrapping">Перенос строки для однотипных блоков</a></li>
+                    <li><a href="#jade-long-lines">Длинные строки</a></li>
+                    <li><a href="#jade-mixins">Пиши меньше, делай больше</a></li>
+                    <li><a href="#jade-number-values">Числовые значения в аттрибутах</a></li>
+                    <li><a href="#jade-several-attributes">Несколько аттрибутов</a></li>
+                    <li><a href="#jade-single-attributes">Одиночные аттрибуты</a></li>
+                    <li><a href="#jade-single-quotes">Одиночные кавычки</a></li>
+                    <li><a href="#jade-unnecessary-attributes">Необязательные аттрибуты</a></li>
+                    <li><a href="#jade-include-partials">Подключение шаблонов</a></li>
+                    <li><a href="#jade-useful-links">Полезные ссылки</a></li>
+                </ul>
+            </div>
+            <div class="chapter-part-col">
+                <h4>Stylus</h4>
+                <ul>
+                    <li><a href="#stylus-syntax">Синтаксис</a></li>
+                    <li><a href="#stylus-indentation">Отступы</a></li>
+                    <li><a href="#stylus-space-classes">Отступы между классами</a></li>
+                    <li><a href="#stylus-unnecessary-symbols">Использование ненужных символов</a></li>
+
+                    <li><a href="#stylus-one-block">Один файл - один блок</a></li>
+                    <li><a href="#stylus-mixins-blocks">Свойства в примесях</a></li>
+                    <li><a href="#stylus-total">Итого</a></li>
+
+                    <li><a href="#stylus-variables">Переменные</a></li>
+                    <li><a href="#stylus-problems">Возможные проблемы и пути их решения</a></li>
+                    <li><a href="#stylus-general-recomendations">Общие рекомедации</a></li>
+                    <li><a href="#stylus-useful-links">Полезные ссылки</a></li>
+                </ul>
+            </div>
+            <div class="chapter-part-col">
+                <h4>JavaScript</h4>
+                <ul>
+                    <li><a href="#js-access-functions">Геттеры и сеттеры</a></li>
+                    <li><a href="#js-code-blocks">Блоки кода</a></li>
+                    <li><a href="#js-comments">Комментарии</a></li>
+                    <li><a href="#js-conditionals">Условные выражения и равенства</a></li>
+                    <li><a href="#js-constructors">Конструкторы</a></li>
+                    <li><a href="#js-copy-array">Копирование массива</a></li>
+                    <li><a href="#js-copy-array-like">Копирование похожего по свойствам на массив объект</a></li>
+                    <li><a href="#js-events">События</a></li>
+                    <li><a href="#js-functions">Функции</a></li>
+                    <li><a href="#js-key-words">Ключевые слова</a></li>
+                    <li><a href="#js-naming-conventions">Соглашение об именовании</a></li>
+                    <li><a href="#js-properties">Свойства</a></li>
+                    <li><a href="#js-reserved-words">Зарезервированные слова</a></li>
+                    <li><a href="#js-spaces">Пробелы</a></li>
+                    <li><a href="#js-strings">Строки</a></li>
+                    <li><a href="#js-syntax">Синтаксис</a></li>
+                    <li><a href="#js-variables">Переменные</a></li>
+                </ul>
+            </div>
+            <div class="chapter-part-col">
+                <h4>Angular</h4>
+                <ul>
+                    <li><a href="#css-syntax">Структура папок</a></li>
+                </ul>
+            </div>
+            <div class="chapter-part-col">
+                <h4>Git</h4>
+                <ul>
+                    <li><a href="#git-branch-naming">Наименование веток</a></li>
+                </ul>
+            </div>
         </article>
-      </section>
+    </section>
 
-      <section class="chapter">
-        <h2>HTML</h2>
-        {{~> html/html-rules ~}}
-      </section>
+    <section class="chapter">
+        <h2>Jade</h2>
+        {{~> jade/jade-rules ~}}
+        {{~> jade/jade-recomendations ~}}
+    </section>
 
-      <section class="chapter">
-        <h2>CSS</h2>
-        {{~> css/css-rules ~}}
-      </section>
+    <section class="chapter">
+        <h2>Stylus</h2>
+        {{~> stylus/stylus-rules ~}}
+        {{~> stylus/stylus-recomendations ~}}
+    </section>
 
-      {{~> footer ~}}
-    </main>
+    <section class="chapter">
+        <h2>JavaScript</h2>
+        {{~> js/js-rules ~}}
+    </section>
 
-    <script src="{{resolve 'app.js'}}"></script>
-  </body>
+    <section class="chapter">
+        <h2>jQuery</h2>
+        {{~> jquery/jquery-rules ~}}
+    </section>
+
+    <section class="chapter">
+        <h2>Git</h2>
+        {{~> git/git-rules ~}}
+    </section>
+
+    {{~> footer ~}}
+</main>
+
+<script src="{{resolve 'app.js'}}"></script>
+</body>
 </html>

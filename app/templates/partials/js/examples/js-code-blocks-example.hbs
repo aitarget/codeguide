@@ -1,0 +1,22 @@
+
+/* Плохо */
+if (test)
+  return false;
+
+/* Хорошо */
+if (test) return false;
+
+/* Хорошо */
+if (test) {
+  return false;
+}
+
+/* Плохо */
+function() { return false; }
+
+/* Хорошо */
+function() {
+  return false;
+}
+
+

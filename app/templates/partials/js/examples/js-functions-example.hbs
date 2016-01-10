@@ -1,0 +1,42 @@
+/* Объявление анонимной функции */
+var anonymous = function () {
+  return true;
+};
+
+/* Объявление именованной функции */
+var named = function named() {
+  return true;
+};
+
+/* Объявление функции, которая сразу же выполняется (замыкание) */
+(function () {
+  console.log('Если вы читаете это, вы открыли консоль.');
+})();
+
+
+
+/* Плохо */
+if (currentUser) {
+  function test() {
+    console.log('Плохой мальчик.');
+  }
+}
+
+/* Хорошо */
+var test;
+if (currentUser) {
+  test = function test() {
+    console.log('Молодец.');
+  };
+}
+
+
+/* Плохо */
+function nope(name, options, arguments) {
+  // ...код...
+}
+
+/* Хорошо */
+function yup(name, options, args) {
+  // ...код...
+}
