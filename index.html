@@ -1,557 +1,1703 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>Стиль кода Академии HTML</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Стиль кода Aitarget</title>
+    <link rel="stylesheet" href="/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@htmlacademy_ru">
-    <meta name="twitter:image" content="https://htmlacademy.github.io/codeguide/img/og.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://htmlacademy.github.io/codeguide/">
-    <meta property="og:title" itemprop="name" content="Стиль кода Академии HTML">
-    <meta property="og:image" itemprop="image" content="https://htmlacademy.github.io/codeguide/img/og.png">
-    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-29640059-7','auto');ga('send','pageview');</script>
-  </head>
-  <body>
+</head>
+<body>
 
-    <main><header>
+<main><header>
   <a href="https://htmlacademy.ru" target="_blank">
-    <img class="logo" src="img/bane.svg" width="300" height="300" alt="HTML Academy" title="HTML Academy">
+    <img class="logo" src="/img/logo.png" width="300" height="300" alt="HTML Academy" title="HTML Academy">
   </a>
-  <h1>Стиль кода Академии HTML</h1>
-  <p><a href="https://github.com/htmlacademy/codeguide">github.com/htmlacademy/codeguide</a></p>
+  <h1>Стиль кода Aitarget</h1>
+  <p><a href="https://github.com/aitarget/codeguide">github.com/aitarget/codeguide</a></p>
 </header>
 <section class="chapter">
         <h2>Оглавление</h2>
         <article class="chapter-part">
-          <div class="chapter-part-col">
-            <h4>HTML</h4>
-            <ul>
-              <li><a href="#html-syntax">Синтаксис</a></li>
-              <li><a href="#html-validator">Валидность</a></li>
-              <li><a href="#html-doctype">HTML-доктайп</a></li>
-              <li><a href="#html-encoding">Кодировка символов</a></li>
-              <li><a href="#html-style-includes">Подключение стилей</a></li>
-              <li><a href="#html-js-includes">Подключение скриптов</a></li>
-              <li><a href="#html-attribute-order">Порядок атрибутов</a></li>
-              <li><a href="#html-boolean">Логические атрибуты</a></li>
-              <li><a href="#html-form-labels">Подписи полей ввода</a></li>
-              <li><a href="#html-img-sizes">Размеры картинок</a></li>
-              <li><a href="#html-language">Атрибут языка</a></li>
-            </ul>
-          </div>
-          <div class="chapter-part-col">
-            <h4>CSS</h4>
-            <ul>
-              <li><a href="#css-syntax">Синтаксис</a></li>
-              <li><a href="#css-order">Порядок свойств</a></li>
-              <li><a href="#css-class-names">Имена классов</a></li>
-              <li><a href="#css-import">Правило @import</a></li>
-              <li><a href="#css-font-variant">Варианты шрифта</a></li>
-            </ul>
-          </div>
-        </article>
-      </section>
+            <div class="chapter-part-col">
+                <h4>Jade</h4>
+                <ul>
+                    <li><a href="#jade-classes-ids">Классы и идентификаторы пишутся в начале</a></li>
+                    <li><a href="#jade-comments">Комментарии</a></li>
+                    <li><a href="#jade-inline-elements">Строчные элементы</a></li>
+                    <li><a href="#jade-linewrapping">Перенос строки для однотипных блоков</a></li>
+                    <li><a href="#jade-long-lines">Длинные строки</a></li>
+                    <li><a href="#jade-mixins">Пиши меньше, делай больше</a></li>
+                    <li><a href="#jade-number-values">Числовые значения в аттрибутах</a></li>
+                    <li><a href="#jade-several-attributes">Несколько аттрибутов</a></li>
+                    <li><a href="#jade-single-attributes">Одиночные аттрибуты</a></li>
+                    <li><a href="#jade-single-quotes">Одиночные кавычки</a></li>
+                    <li><a href="#jade-unnecessary-attributes">Необязательные аттрибуты</a></li>
+                    <li><a href="#jade-include-partials">Подключение шаблонов</a></li>
+                    <li><a href="#jade-useful-links">Полезные ссылки</a></li>
+                </ul>
+            </div>
+            <div class="chapter-part-col">
+                <h4>Stylus</h4>
+                <ul>
+                    <li><a href="#stylus-syntax">Синтаксис</a></li>
+                    <li><a href="#stylus-indentation">Отступы</a></li>
+                    <li><a href="#stylus-space-classes">Отступы между классами</a></li>
+                    <li><a href="#stylus-unnecessary-symbols">Использование ненужных символов</a></li>
 
-      <section class="chapter">
-        <h2>HTML</h2><article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="html-syntax">Синтаксис</h4>
+                    <li><a href="#stylus-one-block">Один файл - один блок</a></li>
+                    <li><a href="#stylus-mixins-blocks">Свойства в примесях</a></li>
+                    <li><a href="#stylus-total">Итого</a></li>
+
+                    <li><a href="#stylus-variables">Переменные</a></li>
+                    <li><a href="#stylus-problems">Возможные проблемы и пути их решения</a></li>
+                    <li><a href="#stylus-general-recomendations">Общие рекомедации</a></li>
+                    <li><a href="#stylus-useful-links">Полезные ссылки</a></li>
+                </ul>
+            </div>
+            <div class="chapter-part-col">
+                <h4>JavaScript</h4>
+                <ul>
+                    <li><a href="#js-access-functions">Геттеры и сеттеры</a></li>
+                    <li><a href="#js-code-blocks">Блоки кода</a></li>
+                    <li><a href="#js-comments">Комментарии</a></li>
+                    <li><a href="#js-conditionals">Условные выражения и равенства</a></li>
+                    <li><a href="#js-constructors">Конструкторы</a></li>
+                    <li><a href="#js-copy-array">Копирование массива</a></li>
+                    <li><a href="#js-copy-array-like">Копирование похожего по свойствам на массив объект</a></li>
+                    <li><a href="#js-events">События</a></li>
+                    <li><a href="#js-functions">Функции</a></li>
+                    <li><a href="#js-key-words">Ключевые слова</a></li>
+                    <li><a href="#js-naming-conventions">Соглашение об именовании</a></li>
+                    <li><a href="#js-properties">Свойства</a></li>
+                    <li><a href="#js-reserved-words">Зарезервированные слова</a></li>
+                    <li><a href="#js-spaces">Пробелы</a></li>
+                    <li><a href="#js-strings">Строки</a></li>
+                    <li><a href="#js-syntax">Синтаксис</a></li>
+                    <li><a href="#js-variables">Переменные</a></li>
+                </ul>
+            </div>
+            <div class="chapter-part-col">
+                <h4>Angular</h4>
+                <ul>
+                    <li><a href="#css-syntax">Структура папок</a></li>
+                </ul>
+            </div>
+            <div class="chapter-part-col">
+                <h4>Git</h4>
+                <ul>
+                    <li><a href="#git-branch-naming">Наименование веток</a></li>
+                </ul>
+            </div>
+        </article>
+    </section>
+
+    <section class="chapter">
+        <h2>Jade</h2><article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="jade-classes-ids">Классы и идентификаторы пишутся в начале</h4>
+<p>Классы и идентификаторы пишутся в начале, а не в атрибутах. Указывать тег <span class="text-bold">div</span> не нужно, т.к. он используется по умолчанию.</p></div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-jade">/* Плохо */
+div(class='carousel' id="carousel")
+nav(class='nav nav_pos_left')
+div(id="carousel")
+
+/* Хорошо */
+.carousel
+nav.nav.nav_pos_left
+#carousel</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="jade-several-attributes">Несколько аттрибутов</h4>
+<p>Для нескольких атрибутов запятая не нужна.</p></div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-jade">/* Плохо */
+input.input-text(type='text', name='project', value='csssr', required)
+
+/* Хорошо */
+input.input-text(type='text' name='project' value='csssr' required)</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="jade-single-quotes">Одинарные кавычки</h4>
+<p>Используйте одинарные кавычки для текстовых значений.</p></div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-jade">/* Плохо */
+input.input-text(type="text" name="project" value="csssr" required)
+
+/* Хорошо */
+input.input-text(type='text' name='project' value='csssr' required)
+</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="jade-unnecessary-attributes">Необязательные аттрибуты</h4>
+<p>Не давайте необязательные значения атрибутам.</p></div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-jade">/* Плохо */
+input.input-checkbox(type='checkbox' name='browser[]' value='chrome' checked='checked')
+
+/* Хорошо */
+input.input-checkbox(type='checkbox' name='browser[]' value='chrome' checked)</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="jade-single-attributes">Одиночные аттрибуты</h4>
+<p>Распологайте одиночные атрибуты в последнюю очередь.</p></div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-jade">/* Плохо */
+input.input-checkbox(type='checkbox' checked name='browser[]' value='chrome')
+
+/* Хорошо */
+input.input-checkbox(type='checkbox' name='browser[]' value='chrome' checked)</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="jade-number-values">Числовые значения в аттрибутах</h4>
+<p>Для числовых значений кавычки не нужны.</p></div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-jade">/* Плохо */
+input.input-text(type="text" name="price" value="24999")
+
+/* Хорошо */
+input.input-text(type='text' name='price' value=24999)</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="jade-long-lines">Длинные строки</h4>
+<p>Переносите атрибуты новую строку, если их много и/или значения длинные.</p></div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-jade">/* Плохо */
+input.input-text(type='text' name='project' value='csssr' data-required='Это поле обязательно для заполнения!'  data-hint='Допустимы только символы латинского алфавита `[a-z-A-Z]` и числа `[0-9]`.' required)
+
+/* Хорошо */
+input.input-text(
+    type='text'
+    name='project'
+    value='csssr'
+    data-required='Это поле обязательно для заполнения!'
+    data-hint='Допустимы только символы латинского алфавита `[a-z-A-Z]` и числа `[0-9]`.'
+    required
+)</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="jade-linewrapping">Перенос строки для однотипных блоков</h4>
+<p>Добавляйте перенос строки для однотипных блоков с множественным вложением элементов.</p></div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-jade">/* Плохо */
+.project
+   .project__name Lorem
+   .project__desc
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      | Unde doloremque neque facilis sed repudiandae tempore ipsum provident officia eaque quas.
+.project
+   .project__name Ipsum.
+   .project__desc
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      | Unde doloremque neque facilis sed repudiandae tempore ipsum provident officia eaque quas.
+
+/* Хорошо */
+.project
+   .project__name Lorem
+   .project__desc
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      | Unde doloremque neque facilis sed repudiandae tempore ipsum provident officia eaque quas.
+
+.project
+   .project__name Ipsum.
+   .project__desc
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      | Unde doloremque neque facilis sed repudiandae tempore ipsum provident officia eaque quas.</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="jade-inline-elements">Строчные элементы</h4>
+<p>Строчные элементы можно записывать на одной строке через двоеточие <span class="text-bold">:</span>.</p>
+<p> злоупотреблять с длинными классами.</p></div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-jade">/* Хорошо */
+ul.nav
+   li.nav__item
+      a.nav__link(href='/') Главная
+   li.nav__item
+      a.nav__link(href='/projects') Проекты
+   li.nav__item
+      a.nav__link(href='/contacts') Контакты
+
+/* Лучше */
+ul.nav
+    li.nav__item: a.nav__link(href='/') Главная
+    li.nav__item: a.nav__link(href='/projects') Проекты
+    li.nav__item: a.nav__link(href='/contacts') Контакты</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="jade-comments">Комментарии</h4>
+<p>Комментарии в Jade, которые не должны попасть в HTML записываются через <span class="text-bold">//-</span></p>
+<p>Простые или условные комментарии можно записывать прямо в HTML-формате.</p>
+</div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-jade">// Этот комментарий попадёт в HTML.
+
+//- Этот комментарий не попадёт в HTML.
+
+&lt;!--[if IE]&gt;
+meta(name='imagetoolbar' content='no')
+meta(name='msthemecompatible' content='no')
+&lt;![endif]--&gt;
+
+&lt;!--noindex--&gt;
+Это содержимое не будет индексироваться поисковиком.
+&lt;!--/noindex--&gt;</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="jade-mixins">Пиши меньше, делай больше</h4>
+<p>Для однотипных и повторяющихся строк кода имеет смысл использовать примеси и указать только данные.</p>
+</div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-jade">mixin tools(list)
+    ul.list
+        each item in list
+            li.list__item
+                span.mark= item[0]
+                = ' - ' + item[1]
+
++tools([
+    ['spritesmith', 'генератор спрайтов и CSS переменных'],
+    ['imagemin', 'сжатие картинок']
+])
+
+Скомпилирует
+
+&lt;ul class="list"&gt;
+    &lt;li class="list__item"&gt;
+        &lt;span class="mark"&gt;spritesmith&lt;/span&gt; - генератор спрайтов и CSS переменных
+    &lt;/li&gt;
+    &lt;li class="list__item"&gt;
+        &lt;span class="mark"&gt;imagemin&lt;/span&gt; - сжатие картинок
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </figure>
+  </div>
+</article><article class="chapter-part">
+    <div class="chapter-part-col"><h4 id="jade-include-partials">Подключение шаблонов</h4>
 <ul>
-  <li>Для отступов у&nbsp;вложенных элементов используются два пробела. Для правильного форматирования используйте файл <a href="https://github.com/htmlacademy/codeguide/blob/master/.editorconfig" target="_blank">.editorconfig</a> в&nbsp;вашем редакторе.</li>
-  <li>Теги и&nbsp;их&nbsp;атрибуты пишутся строчными буквами. Для значений атрибутов всегда используются двойные кавычки.</li>
-  <li>Необязательный закрывающий слеш у&nbsp;одиночных тегов (<code>&lt;img&gt;</code>, <code>&lt;br&gt;</code> и&nbsp;другие) не&nbsp;ставится.</li>
-  <li>Необязательные закрывающие теги (например, <code>&lt;/li&gt;</code> или <code>&lt;/body&gt;</code>) не&nbsp;пропускаются.</li>
+    <li><span class="text-bold">include header</span> - используется для подключения частиц страницы, например, для шапок и подвалов.</li>
+    <li><span class="text-bold">extends partials/default</span> - используется для внедрения контент в расширяемый шаблон.</li>
+    <li><span class="text-bold">block content</span> - используется для добавления строк кода в определённое место</li>
+</ul>
+
+<p>Во всех случаях через пробел указывается путь от текущего расположения до шаблона без расширения <span class="text-bold">.jade</span>.</p></div>
+</article>
+
+<article class="chapter-part">
+    <div class="chapter-part-col"><h4 id="jade-useful-links">Полезные ссылки</h4>
+<p><a href="http://jade-lang.com">jade-lang.com</a> - Документация Jade</p>
+<p><a href="http://jsman.ru/jade">http://jsman.ru/jade</a> - Ещё одна документация Jade</p>
+<p><a href="http://naltatis.github.io/jade-syntax-docs">http://naltatis.github.io/jade-syntax-docs</a> - Ещё одна документация Jade</p>
+<p><a href="http://html2jade.org">html2jade.org</a>  - конвертация HTML в Jade и Jade в HTML</p>
+
+</div>
+</article>
+
+
+</section>
+
+    <section class="chapter">
+        <h2>Stylus</h2><article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="stylus-syntax">Синтаксис</h4>
+<p>Используйте вложенность с <span class="text-bold">&</span>,
+    так будет видна зависимость и иерархическое дерево классов.</p>
+</div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-stylus">/* Плохо */
+.project { /* ... */ }
+.project__name { /* ... */ }
+.project__description { /* ... */ }
+
+/* Хорошо */
+.project
+    // ...
+
+    &__name
+        // ...
+
+    &__description
+        // ...</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="stylus-indentation">Отступы</h4>
+<p>Используйте пробелы для отступов, не используйте табы и пробелы одновременно - стили не скомпилируются.<p>
+<p>В этом примере <span class="text-bold">∙∙</span> - два пробела, а <span class="text-bold">――</span> - один отступ с табуляцией.</p>
+<p>Используйте 2 пробела для отступов. В своем редакторе настройте табуляцию в виде пробелов, чтобы при нажатии
+на кнопку tab отступы делались в виде пробелов.</p>
+
+
+</div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-stylus">/* Плохо */
+.project
+――// ...
+
+∙∙&__name
+∙∙∙∙// ...
+
+/* Хорошо */
+.project
+∙∙// ...
+
+∙∙&__name
+∙∙∙∙// ...
+</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+    <div class="chapter-part-col"><h4 id="stylus-space-classes">Отступы между классами</h4>
+<p>Между классами с группой свойств добавляте перенос строки для лучшей читабельности.
+</p></div>
+    <div class="chapter-part-col gray-bgcolor">
+        <figure>
+      <pre><code class="language-stylus">/* Плохо */
+.project
+    // ...
+    &__name
+        // ...
+        &:before
+            // ...
+
+/* Хорошо */
+.project
+    // ...
+
+    &__name
+        // ...
+
+        &:before
+            // ...</code></pre>
+        </figure>
+    </div>
+</article>
+
+<article class="chapter-part">
+    <div class="chapter-part-col"><h4 id="stylus-unnecessary-symbols">Использование ненужных символов</h4>
+<p>Опускайте использование фигурных скобок <span class="text-bold">{}</span>, двоеточий <span class="text-bold">:</span> и точек с запятыми <span class="text-bold">;</span>, в Stylus можно обходиться без них.</p></div>
+    <div class="chapter-part-col gray-bgcolor">
+        <figure>
+      <pre><code class="language-stylus">/* Плохо */
+.button {
+	position: relative;
+	font-size: 14px;
+	line-height: 1;
+	background-color: #08f;
+}
+
+/* Хорошо */
+.button
+	position relative
+	font-size 14px
+	line-height 1
+	background-color #08f</code></pre>
+        </figure>
+    </div>
+</article>
+
+<article class="chapter-part">
+    <div class="chapter-part-col"><h4 id="stylus-composite-block-name">Наименование составных блоков</h4>
+<p>Не используйте <span class="text-bold">&-</span> для описания имен составных блоков. Это затрудняет их поиск.</p></div>
+    <div class="chapter-part-col gray-bgcolor">
+        <figure>
+      <pre><code class="language-stylus">/* Плохо */
+.project
+	// ...
+
+	&-container
+		// ...
+
+	&__name
+		// ...
+
+		&:before
+			// ...
+
+/* Хорошо */
+.project
+	// ...
+
+	&__name
+		// ...
+
+		&:before
+			// ...
+
+.project-container
+	// ...</code></pre>
+        </figure>
+    </div>
+</article>
+
+<article class="chapter-part">
+    <div class="chapter-part-col"><h4 id="stylus-one-block">Один файл - один блок</h4>
+<p>Один файл — один блок. Имя файла совпадает с именем блока. Все стили для блока должны быть описаны в этом файле. Блок не должен встречаться в других файлах.</p></div>
+    <div class="chapter-part-col gray-bgcolor">
+        <figure>
+      <pre><code class="language-stylus">/* Плохо */
+// main.styl
+.project
+	// ...
+
+	&__name
+		// ...
+
+	&__before
+		// ...
+
+.project-container
+	// ...
+
+.portfolio
+	// ...
+
+
+/* Хорошо */
+// project.styl
+.project
+	// ...
+
+	&__name
+		// ...
+
+	&__before
+		// ...
+
+// project-container.styl
+.project-container
+	// ...
+
+// portfolio.styl
+.portfolio
+	// ...
+</code></pre>
+        </figure>
+    </div>
+</article>
+
+<article class="chapter-part">
+    <div class="chapter-part-col"><h4 id="stylus-mixins-blocks">Свойства в примесях</h4>
+<p>Примеси содержат в себе только блок свойств, селекторов внутри быть не должно.</p></div>
+    <div class="chapter-part-col gray-bgcolor">
+        <figure>
+      <pre><code class="language-stylus">/* Плохо */
+.block
+	+below(666px)
+		&:first-child
+			margin-top: 5px
+
+/* Хорошо */
+.block
+	&:first-child
+		+below(666px)
+			margin-top: 5px
+</code></pre>
+        </figure>
+    </div>
+</article>
+
+<article class="chapter-part">
+    <div class="chapter-part-col"><h4 id="stylus-total">Итого</h4>
+<p>Исходя из всех предыдущих получаем следующую иерархию и последовательность</p></div>
+    <div class="chapter-part-col gray-bgcolor">
+        <figure>
+      <pre><code class="language-stylus">// Блок
+.block
+	// ...
+
+	// @media-примеси блока
+	+below(640px)
+		// ...
+
+	// Псевдоэлементы блока
+	&::after
+		// ...
+
+	// Псевдоклассы блока
+	&:first-child
+		// ...
+
+		// Псевдоэлементы с псевдоклассом блока
+		&::after
+			// ...
+
+	// Модификаторы блока
+	&_key_val
+		// ...
+
+		// Псевдоклассы модификатора блока
+		&:first-child
+			// ...
+
+		// Псевдоэлементы модификатора блока
+		&::after
+			// ...
+
+	// Элементы
+	&__element
+		// ...
+
+		// @media-примеси элемента
+		+below(640px)
+			// ...
+
+		// Псевдоэлементы элемента
+		&::after
+			// ...
+
+		// Псевдоклассы элемента
+		&:first-child
+			// ...
+
+			// Псевдоэлементы с псевдоклассом элемента
+			&::after
+				// ...
+
+		// Модификаторы элемента
+		&_key_val
+			// ...
+
+			// Псевдоклассы модификатора элемента
+			&:first-child
+				// ...
+
+			// Псевдоэлементы модификатора элемента
+			&::after
+				// ...
+
+	// Псевдоклассы блока, влияющие на элементы
+	&:first-child &__element
+		// ...
+
+	// Модификаторы блока, влияющие на элементы
+	&_key_val &__element
+		// ...
+
+	// N элементов ещё...</code></pre>
+        </figure>
+    </div>
+</article>
+<article class="chapter-part">
+    <div class="chapter-part-col"><h4 id="stylus-variables">Переменные</h4>
+<p>При частой записи одинаковых значений следует использовать переменные:</p>
+
+<ul>
+    <li>Название шрифтов</li>
+    <li>Фирменные цвета</li>
+    <li>Ресурсы в <span class="text-bold">data-uri</span></li>
 </ul>
 </div>
+</article>
+
+<article class="chapter-part">
+    <div class="chapter-part-col"><h4 id="stylus-problems">Возможные проблемы и пути их решения</h4>
+<p>Когда комментируются свойства, нужно комментировать ещё и селектор, иначе он будет брать свойства вместе со следующим селектором или,
+    если следующего селектора нет, компилятор выдаст ошибку.</p></div>
+    <div class="chapter-part-col">
+        <figure>
+        <pre><code class="language-stylus">/* Плохо */
+.block
+    // ...
+
+    &__item
+        // color #08f
+
+/* Хорошо */
+.block
+    // ...
+
+    // &__item
+    //    color #08f</code></pre>
+        </figure>
+    </div>
+</article>
+
+<article class="chapter-part">
+    <div class="chapter-part-col"><h4 id="stylus-general-recomendations">Общие рекомендации</h4>
+<p>Используйте примеси (mixins) для частоповторяющихся участков кода.</p>
+<p>Используйте циклы для однотипных строк с различием в значениях.</p></div>
+</article>
+
+<article class="chapter-part">
+    <div class="chapter-part-col"><h4 id="stylus-useful-links">Полезные ссылки</h4>
+<p><a href="http://stylus-lang.com/">Документация Stylus</a></p>
+<p><a href="http://css2stylus.com/">Онлайн препроцессор CSS в Stylus</a></p>
+</div>
+</article>
+
+
+
+</section>
+
+    <section class="chapter">
+        <h2>JavaScript</h2><article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="js-reserved-words">Зарезервированные слова</h4>
+<p>Не используйте зарезервированные слова в качестве ключей объектов. Они не будут работать в IE8.</p></div>
   <div class="chapter-part-col gray-bgcolor">
     <figure>
-      <pre><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ru"&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Страница о коте&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;article class="post"&gt;
-      &lt;h1&gt;Красивый кот&lt;/h1&gt;
-      &lt;figure class="post-item"&gt;
-        &lt;img src="cat.jpg" alt="Изображение кота"&gt;
-        &lt;figcaption&gt;Кот красив!&lt;/figcaption&gt;
-      &lt;/figure&gt;
-    &lt;/article&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+      <pre><code class="language-js">/* Плохо */
+var superman = {
+  default: { clark: 'kent' },
+  private: true
+};
+
+/* Хорошо */
+var superman = {
+  defaults: { clark: 'kent' },
+  hidden: true
+};</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="js-key-words">Ключевые слова</h4>
+<p>Не используйте ключевые слова (в том числе измененные). Вместо них используйте синонимы.</p></div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-js">/* Плохо */
+var superman = {
+  class: 'alien'
+};
+
+/* Плохо */
+var superman = {
+  klass: 'alien'
+};
+
+/* Хорошо */
+var superman = {
+  type: 'alien'
+};</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="js-copy-array">Копирование массива</h4>
+<p>Если вам необходимо скопировать массив, используйте Array::slice.</p></div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-js">var len = items.length,
+    itemsCopy = [],
+    i;
+
+/* Плохо */
+for (i = 0; i < len; i++) {
+  itemsCopy[i] = items[i];
+}
+
+/* Хорошо */
+itemsCopy = items.slice();</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="js-copy-array-like">Копирование похожий по свойствам на массив объект</h4>
+<p>Чтобы скопировать похожий по свойствам на массив объект (например, NodeList или Arguments), используйте Array::slice.</p></div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-js">function trigger() {
+  var args = Array.prototype.slice.call(arguments);
+  ...
+}</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="js-strings">Строки</h4>
+<p>Используйте одинарные кавычки <span class="text-bold">''</span> для строк.</p>
+<p>Строки длиннее 80 символов нужно разделять, выполняя перенос через конкатенацию строк.</p>
+</div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-js">/* Плохо */
+var name = "Боб Дилан";
+
+/* Хорошо */
+var name = 'Боб Дилан';
+
+/* Плохо */
+var fullName = "Боб " + this.lastName;
+
+/* Хорошо */
+var fullName = 'Дилан ' + this.lastName;
+
+
+/* Плохо */
+var errorMessage = 'Эта сверхдлинная ошибка возникла из-за белой обезъяны. Не говори про обезъяну! Не слушай об обезьяне! Не думай об обезъяне!';
+
+/* Плохо */
+var errorMessage = 'Эта сверхдлинная ошибка возникла из-за белой обезъяны. \
+Не говори про обезъяну! Не слушай об обезьяне! \
+Не думай об обезъяне!';
+
+/* Хорошо */
+var errorMessage = (
+  'Эта сверхдлинная ошибка возникла из-за белой обезъяны. ' +
+  'Не говори про обезъяну! Не слушай об обезьяне! ' +
+  'Не думай об обезъяне!'
+);</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="js-functions">Функции</h4>
+<p>Никогда не объявляйте функцию внутри блока кода — например в <span class="text-bold">if</span>, <span class="text-bold">while</span>, <span class="text-bold">else</span> и так далее. Единственное исключение — блок функции. Вместо этого присваивайте функцию уже объявленной через var переменной. Условное объявление функций работает, но в различных браузерах работает по-разному.</p>
+<p><span class="text-bold">Примечание</span>. ECMA-262 устанавливает понятие блока как списка операторов. Объявление функции (не путайте с присвоением функции переменной) не является оператором.</p>
+<p>Никогда не используйте аргумент функции <span class="text-bold">arguments</span>, он будет более приоритетным над объектом <span class="text-bold">arguments</span>, который доступен без объявления для каждой функции.</p></div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-js">/* Объявление анонимной функции */
+var anonymous = function () {
+  return true;
+};
+
+/* Объявление именованной функции */
+var named = function named() {
+  return true;
+};
+
+/* Объявление функции, которая сразу же выполняется (замыкание) */
+(function () {
+  console.log('Если вы читаете это, вы открыли консоль.');
+})();
+
+
+
+/* Плохо */
+if (currentUser) {
+  function test() {
+    console.log('Плохой мальчик.');
+  }
+}
+
+/* Хорошо */
+var test;
+if (currentUser) {
+  test = function test() {
+    console.log('Молодец.');
+  };
+}
+
+
+/* Плохо */
+function nope(name, options, arguments) {
+  // ...код...
+}
+
+/* Хорошо */
+function yup(name, options, args) {
+  // ...код...
+}</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="js-properties">Свойства</h4>
+<p>Используйте точечную нотацию для доступа к свойствам и методам.</p>
+<p>Используйте нотацию с [], когда вы получаете свойство, имя для которого хранится в переменной.</p>
+</div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-js">var luke = {
+  jedi: true,
+  age: 28
+};
+
+/* Плохо */
+var isJedi = luke['jedi'];
+
+/* Хорошо */
+var isJedi = luke.jedi;
+
+
+var luke = {
+  jedi: true,
+  age: 28
+};
+
+function getProp(prop) {
+  return luke[prop];
+}
+
+var isJedi = getProp('jedi');</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="js-variables">Переменные</h4>
+<p>Используйте одно <span class="text-bold">var</span> объявление переменных для всех переменных, и объявляйте каждую переменную на новой строке.</p>
+<p>Объявляйте переменные, которым не присваивается значение, в конце. Это удобно, когда вам необходимо задать значение одной из этих переменных на базе уже присвоенных значений.</p>
+<p>Присваивайте переменные в начале области видимости. Это помогает избегать проблем с объявлением переменных и областями видимости.</p></div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-js">/* Плохо */
+var items = getItems();
+var goSportsTeam = true;
+var dragonball = 'z';
+
+/* Хорошо */
+var items = getItems(),
+    goSportsTeam = true,
+    dragonball = 'z';
+
+
+/* Плохо */
+var i, len, dragonball,
+    items = getItems(),
+    goSportsTeam = true;
+
+/* Плохо */
+var i, items = getItems(),
+    dragonball,
+    goSportsTeam = true,
+    len;
+
+/* Хорошо */
+var items = getItems(),
+    goSportsTeam = true,
+    dragonball,
+    length,
+    i;
+
+
+/* Плохо */
+function () {
+  test();
+  console.log('Делаю что-нибудь..');
+
+  //..или не делаю...
+
+  var name = getName();
+
+  if (name === 'test') {
+    return false;
+  }
+
+  return name;
+}
+
+/* Хорошо */
+function() {
+  var name = getName();
+
+  test();
+  console.log('Делаю что-то полезное..');
+
+  //..продолжаю приносить пользу людям..
+
+  if (name === 'test') {
+    return false;
+  }
+
+  return name;
+}
+
+/* Плохо */
+function() {
+  var name = getName();
+
+  if (!arguments.length) {
+    return false;
+  }
+
+  return true;
+}
+
+/* Хорошо */
+function() {
+  if (!arguments.length) {
+    return false;
+  }
+
+  var name = getName();
+
+  return true;
+}</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="js-conditionals">Условные выражения и равенства</h4>
+<p>Используйте === и !== вместо == и !=.</p>
+<p>Условные выражения вычисляются посредством приведения к логическому типу Boolean через метод ToBoolean и всегда следуют следующим правилам:</p>
+<ul>
+    <li><span class="text-bold">Object</span> всегда соответствует true</li>
+    <li><span class="text-bold">Undefined</span> всегда соответствует false</li>
+    <li><span class="text-bold">Null</span> всегда соответствует false</li>
+    <li><span class="text-bold">Boolean</span> остается неизменным</li>
+    <li><span class="text-bold">Number</span> соответствует false, если является +0, -0, или NaN, в противном случае соответствует true</li>
+    <li><span class="text-bold">String</span> означает false, если является пустой строкой '', в противном случае true. Условно говоря, для строки происходит сравнение не ее самой, а ее длины – в соответствии с типом number.</li>
+</ul>
+<p>Используйте короткий синтаксис.</p></div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-js">if ([0]) {
+  // true
+  // Массив(Array) является объектом, объекты преобразуются в true
+}
+
+
+/* Плохо */
+if (name !== '') {
+  // ...код...
+}
+
+/* Хорошо */
+if (name) {
+  // ...код...
+}
+
+/* Плохо */
+if (collection.length > 0) {
+  // ...код...
+}
+
+/* Хорошо */
+if (collection.length) {
+  // ...код...
+}
+
+
 </code></pre>
     </figure>
   </div>
 </article>
 
 <article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="html-validator">Валидность</h4>
-<p>
-  Документ должен проходить проверку на&nbsp;валидность. Для проверки используется <a href="http://validator.w3.org/nu/" target="_blank">современный валидатор</a>.
-</p>
-</div>
-</article>
-
-<article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="html-doctype">HTML-доктайп</h4>
-<p>
-  В&nbsp;начале страницы обязательно должен быть указан актуальный <code>doctype</code>, чтобы браузер отображал её&nbsp;в&nbsp;режиме соответствия стандартам. Это гарантирует, что страница будет выглядеть единообразно во&nbsp;всех современных браузерах.
-</p>
-</div>
+  <div class="chapter-part-col"><h4 id="js-code-blocks">Блоки кода</h4>
+<p>Используйте фигурные скобки для всех многострочных блоков.</p></div>
   <div class="chapter-part-col gray-bgcolor">
     <figure>
-      <pre><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ru"&gt;
-  &lt;head&gt;…&lt;/head&gt;
-  &lt;body&gt;…&lt;/body&gt;
-&lt;/html&gt;
+      <pre><code class="language-js">
+/* Плохо */
+if (test)
+  return false;
+
+/* Хорошо */
+if (test) return false;
+
+/* Хорошо */
+if (test) {
+  return false;
+}
+
+/* Плохо */
+function() { return false; }
+
+/* Хорошо */
+function() {
+  return false;
+}
+
+
 </code></pre>
     </figure>
   </div>
 </article>
 
 <article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="html-encoding">Кодировка символов</h4>
-<p>
-  Кодировка символов на&nbsp;странице всегда должна быть явно указана, чтобы обеспечить корректное отображение текста. Кодировка <code>utf-8</code> предпочтительна.
-</p>
+  <div class="chapter-part-col"><h4 id="js-comments">Комментарии</h4>
+<p>Используйте <span class="text-bold">/** ... */</span> для многострочных комментариев. Включите описание, опишите типы и значения для всех параметров и возвращаемых значений в формате jsdoc.</p>
+<p>Используйте <span class="text-bold">//</span> для комментариев в одну строку. Размещайте комментарии на новой строке над темой комментария. Добавляйте пустую строку над комментарием.</p>
+<p>Префикс TODO помогает другим разработчикам быстро понять, что вы указываете на проблему, к которой нужно вернуться в дальнейшем, или если вы предлагете решение проблемы, которое должно быть реализовано.</p><p>Эти комментарии отличаются от обычных комментариев, так как не описывают текущее поведение, а призывают к действию, например TODO -- нужно реализовать интерфейс. Такие комментарии также автоматически обнаруживаются многими IDE и редакторами кода, что позволяет быстро перемещаться между ними.</p>
+<p>Используйте <span class="text-bold">// TODO FIXME:</span> для аннотирования проблем</p>
+<p>Используйте <span class="text-bold">// TODO:</span> для указания решений проблем</p>
 </div>
   <div class="chapter-part-col gray-bgcolor">
     <figure>
-      <pre><code class="language-markup">&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;Заголовок страницы&lt;/title&gt;
-&lt;/head&gt;
-</code></pre>
+      <pre><code class="language-js">/* Плохо */
+// make() возвращает новый элемент
+// основываясь на получаемом имени тэга
+//
+// @param <String> tag
+// @return <Element> element
+function make(tag) {
+
+  // ...создаем element...
+
+  return element;
+}
+
+/* Хорошо */
+/**
+ * make() возвращает новый элемент
+ * основываясь на получаемом имени тэга
+ *
+ * @param <String> tag
+ * @return <Element> element
+ */
+function make(tag) {
+
+  // ...создаем element...
+
+  return element;
+}
+
+/* Плохо */
+var active = true;  // устанавливаем активным элементом
+
+/* Хорошо */
+// устанавливаем активным элементом
+var active = true;
+
+/* Плохо */
+function getType() {
+  console.log('проверяем тип...');
+  // задаем тип по умолчанию 'no type'
+  var type = this._type || 'no type';
+
+  return type;
+}
+
+/* Хорошо */
+function getType() {
+  console.log('проверяем тип...');
+
+  // задаем тип по умолчанию 'no type'
+  var type = this._type || 'no type';
+
+  return type;
+}
+
+
+function Calculator() {
+
+  // TODO FIXME: тут не нужно использовать глобальную переменную
+  total = 0;
+
+  return this;
+}
+
+function Calculator() {
+
+  // TODO: должна быть возможность изменять значение через параметр функции
+  this.total = 0;
+
+  return this;
+}</code></pre>
     </figure>
   </div>
 </article>
 
 <article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="html-style-includes">Подключение стилей</h4>
-<p>
-  Стилевые файлы с&nbsp;помощью <code>&lt;link&gt;</code> подключаются внутри <code>&lt;head&gt;</code>. При этом атрибут <code>type</code> для тега <code>&lt;link&gt;</code> не&nbsp;указывается, так как его значение <code>text/css</code> устанавливается по&nbsp;умолчанию.
-</p>
+    <div class="chapter-part-col"><h4 id="js-syntax">Синтаксис</h4>
+<p>Данную картинку можно распечатать для удобства и повесить где - нибудь на виду, чтобы можно было быстро
+сверяться со стилем кода, к тому же запоминание будет идти гораздо быстрее.</p>
 </div>
-  <div class="chapter-part-col gray-bgcolor">
-    <figure>
-      <pre><code class="language-markup">&lt;!-- Хорошо: стилевой файл подключён в секции head --&gt;
-&lt;!DOCTYPE html&gt;
-&lt;html lang="ru"&gt;
-  &lt;head&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-  &lt;/head&gt;
-  &lt;body&gt;…&lt;/body&gt;
-&lt;/html&gt;
+    <div class="chapter-part-col gray-bgcolor"><p class="text-center"><img src="https://cloud.githubusercontent.com/assets/2854701/3838799/c95fadf4-1e08-11e4-9a61-54a05120db35.png" alt="Синтаксис"></p>
 
-&lt;!-- Плохо: стилевой файл подключён в секции body --&gt;
-&lt;!DOCTYPE html&gt;
-&lt;html lang="ru"&gt;
-  &lt;head&gt;…&lt;/head&gt;
-  &lt;body&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-    </figure>
-  </div>
+</div>
 </article>
 
 <article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="html-js-includes">Подключение скриптов</h4>
-<p>
-  Скрипты должны подключаться в&nbsp;самом низу страницы, чтобы при её&nbsp;загрузке не&nbsp;блокировать отображение содержимого.
-</p>
-<p>
-  При подключении скриптов в&nbsp;теге <code>&lt;script&gt;</code> атрибут <code>type</code> не&nbsp;указывается, так как его значение <code>text/javascript</code> устанавливается по&nbsp;умолчанию.
-</p>
+    <div class="chapter-part-col"><h4 id="js-spaces">Пробелы</h4>
+<p>Устанавливайте один пробел перед открывающей скобкой.</p>
+<p>Используйте отступы, когда делаете цепочки вызовов.</p>
 </div>
-  <div class="chapter-part-col gray-bgcolor">
-    <figure>
-      <pre><code class="language-markup">&lt;!-- Хорошо: скрипт подключается перед &lt;/body&gt; --&gt;
-&lt;!DOCTYPE html&gt;
-&lt;html lang="ru"&gt;
-  &lt;head&gt;…&lt;/head&gt;
-  &lt;body&gt;
-    &lt;!-- Содержимое страницы --&gt;
-    &lt;script src="app.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+    <div class="chapter-part-col gray-bgcolor">
+        <figure>
+          <pre><code class="language-js">/* Плохо */
+function test(){
+  console.log('test');
+}
 
-&lt;!-- Плохо: скрипт подключается в секции &lt;head&gt; --&gt;
-&lt;!DOCTYPE html&gt;
-&lt;html lang="ru"&gt;
-  &lt;head&gt;
-    &lt;script src="app.js"&gt;&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;…&lt;/body&gt;
-&lt;/html&gt;
+/* Хорошо */
+function test() {
+  console.log('test');
+}
+
+/* Плохо */
+dog.set('attr',{
+  age: '1 year',
+  breed: 'Bernese Mountain Dog'
+});
+
+/* Хорошо */
+dog.set('attr', {
+  age: '1 year',
+  breed: 'Bernese Mountain Dog'
+});
+
+
+/* Плохо */
+$('#items').find('.selected').highlight().end().find('.open').updateCount();
+
+/* Хорошо */
+$('#items')
+  .find('.selected')
+    .highlight()
+    .end()
+  .find('.open')
+    .updateCount();
+
+/* Плохо */
+var leds = stage.selectAll('.led').data(data).enter().append('svg:svg').class('led', true)
+    .attr('width',  (radius + margin) * 2).append('svg:g')
+    .attr('transform', 'translate(' + (radius + margin) + ',' + (radius + margin) + ')')
+    .call(tron.led);
+
+/* Хорошо */
+var leds = stage.selectAll('.led')
+    .data(data)
+  .enter().append('svg:svg')
+    .class('led', true)
+    .attr('width',  (radius + margin) * 2)
+  .append('svg:g')
+    .attr('transform', 'translate(' + (radius + margin) + ',' + (radius + margin) + ')')
+    .call(tron.led);
+
+
+
 </code></pre>
-    </figure>
-  </div>
+        </figure>
+      </div>
 </article>
 
 <article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="html-attribute-order">Порядок атрибутов</h4>
-<p>
-  Атрибут класса у&nbsp;HTML-элементов пишется первым. Единообразное написание помогает легче считывать код и&nbsp;быстрее разбираться в&nbsp;назначении блоков по&nbsp;их&nbsp;классам.
-</p>
-<p>
-  Остальные атрибуты могут быть расставлены в&nbsp;любом порядке, но&nbsp;тоже единообразно для одинаковых элементов.
-</p>
-</div>
-  <div class="chapter-part-col gray-bgcolor">
-    <figure>
-      <pre><code class="language-markup">&lt;a class="element element-big" id="element" href="/" data-name="element"&gt;Ссылка&lt;/a&gt;
+    <div class="chapter-part-col"><h4 id="js-naming-conventions">Соглашение об именовании</h4>
+<p>Избегайте однобуквенных имен функций. Имена должны давать представление о том, что делает эта функция.</p>
+<p>Используйте camelCase для именования объектов, функций и переменных.</p>
+<p>Используйте PascalCase для именования конструкторов классов.</p>
+<p>Используйте подчеркивание _ в качестве префикса для именования внутренних методов и переменных объекта.</p>
+<p>Создавая ссылку на this, используйте название от самого класса в camelCase, вместо self/that/_this/me и т.п</p>
+<p>Задавайте имена для функций. Это повышает читаемость сообщений об ошибках кода.</p></div>
+    <div class="chapter-part-col gray-bgcolor">
+        <figure>
+          <pre><code class="language-js">/* Плохо */
+function q() {
+  // ...код...
+}
 
-&lt;input class="form-control" type="text" name="test"&gt;
+/* Хорошо */
+function query() {
+  // ...код...
+}
 
-&lt;img class="pets-picture" src="cats.jpg" alt="Изображение котиков"&gt;
-</code></pre>
-    </figure>
-  </div>
+
+/* Плохо */
+var OBJEcttsssss = {};
+var this_is_my_object = {};
+function c() {};
+var u = new user({
+  name: 'Bob Parr'
+});
+
+/* Хорошо */
+var thisIsMyObject = {};
+function thisIsMyFunction() {};
+var user = new User({
+  name: 'Bob Parr'
+});
+
+/* Плохо */
+function user(options) {
+  this.name = options.name;
+}
+
+var bad = new user({
+  name: 'Плохиш'
+});
+
+/* Хорошо */
+function User(options) {
+  this.name = options.name;
+}
+
+var good = new User({
+  name: 'Кибальчиш'
+});
+
+/* Плохо */
+this.__firstName__ = 'Panda';
+this.firstName_ = 'Panda';
+
+/* Хорошо */
+this._firstName = 'Panda';
+
+
+
+function Rocket() {}
+
+// ...
+
+Rocket.prototype.startMessage = 'Houston, I\'m flying into space!';
+
+/* Плохо */
+Rocket.prototype.start = function () {
+  var _this = this;
+
+  _this.lightsCameraAction(function () {
+    console.log(_this.startMessage);
+  });
+};
+
+/* Хорошо */
+Rocket.prototype.start = function () {
+  var rocket = this;
+
+  rocket.lightsCameraAction(function () {
+    console.log(rocket.startMessage);
+  });
+};
+
+
+
+/* Плохо */
+var log = function(msg) {
+  console.log(msg);
+};
+
+/* Хорошо */
+var log = function log(msg) {
+  console.log(msg);
+};</code></pre>
+        </figure>
+      </div>
 </article>
 
 <article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="html-boolean">Логические атрибуты</h4>
-<p>
-  Для логических атрибутов (например, <code>checked</code>, <code>disabled</code>, <code>required</code>) значение не&nbsp;указывается, а&nbsp;сами атрибуты указываются последними и&nbsp;в&nbsp;единообразной последовательности во&nbsp;всём документе.
-</p>
-</div>
-  <div class="chapter-part-col gray-bgcolor">
-    <figure>
-      <pre><code class="language-markup">&lt;!-- checked="checked" необязательно --&gt;
-&lt;input type="checkbox" required checked&gt;
+    <div class="chapter-part-col"><h4 id="js-access-functions">Геттеры и сеттеры</h4>
+<p>Функции универсального доступа к свойствам не требуются.</p>
+<p>Если вам необходимо создать функцию для доступа к переменной, используйте раздельные функции getVal() и setVal('hello')</p>
+<p>Если свойство является логическим(boolean), используйте isVal() или hasVal()</p>
+<p>Вы можете создавать функции get() и set(), но будьте логичны и последовательны – то есть не добавляйте свойства, которые не могут быть изменены через эти функции.</p></div>
+    <div class="chapter-part-col gray-bgcolor">
+        <figure>
+          <pre><code class="language-js">/* Плохо */
+dragon.age();
 
-&lt;input type="text" disabled&gt;
+/* Хорошо */
+dragon.getAge();
 
-&lt;select&gt;
-  &lt;option value="1" selected>1&lt;/option&gt;
-&lt;/select&gt;
-</code></pre>
-    </figure>
-  </div>
+/* Плохо */
+dragon.age(25);
+
+/* Хорошо */
+dragon.setAge(25);
+
+
+/* Плохо */
+if (!dragon.age()) {
+  return false;
+}
+
+/* Хорошо */
+if (!dragon.hasAge()) {
+  return false;
+}
+
+
+function Jedi(options) {
+  options || (options = {});
+  var lightsaber = options.lightsaber || 'blue';
+  this.set('lightsaber', lightsaber);
+}
+
+Jedi.prototype.set = function(key, val) {
+  this[key] = val;
+};
+
+Jedi.prototype.get = function(key) {
+  return this[key];
+};</code></pre>
+        </figure>
+      </div>
 </article>
 
 <article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="html-form-labels">Подписи полей ввода</h4>
-<p>
-  Для улучшения взаимодействия пользователя с&nbsp;элементами форм, при нажатии на&nbsp;подпись поля, оно должно активироваться. Для этого элемент формы связывается с&nbsp;его описанием с&nbsp;помощью идентификатора и&nbsp;атрибута <code>for</code> тега <code>&lt;label&gt;</code>.
-</p>
-</div>
-  <div class="chapter-part-col gray-bgcolor">
-    <figure>
-      <pre><code class="language-markup">&lt;!-- Хорошо: элемент формы radio связан с подписью через идентификатор --&gt;
-&lt;input type="radio" id="choose"&gt;
-&lt;label for="choose"&gt;Радио кнопка&lt;/label&gt;
+    <div class="chapter-part-col"><h4 id="js-constructors">Конструкторы</h4>
+<p>Присваивайте метод прототипу вместо замены прототипа на другой объект. Замена прототипа на другой объект делает наследование невозможным.</p>
+<p>Методы могут возвращать this для создания цепочек вызовов. Но стоит оставаться последовательным и обеспечить одинаковое поведение для всех методов, кроме геттеров.</p>
+<p>Вы можете заменить стандартный метод toString(), но убедитесь, что он работает и не вызывает побочных эффектов.</p></div>
+    <div class="chapter-part-col gray-bgcolor">
+        <figure>
+          <pre><code class="language-js">function Jedi() {
+  console.log('new jedi');
+}
 
-&lt;!-- Хорошо: элемент формы radio и подпись обёрнуты в label --&gt;
-&lt;label&gt;
-  &lt;input type="radio"&gt; Радио кнопка
-&lt;/label&gt;
+/* Плохо */
+Jedi.prototype = {
+  fight: function fight() {
+    console.log('fighting');
+  },
 
-&lt;!-- Плохо: подпись не связана с элементом формы --&gt;
-&lt;input type="radio" id="choose"&gt; Радио кнопка
+  block: function block() {
+    console.log('blocking');
+  }
+};
+
+/* Хорошо */
+Jedi.prototype.fight = function fight() {
+  console.log('fighting');
+};
+
+Jedi.prototype.block = function block() {
+  console.log('blocking');
+};
+
+
+
+/* Плохо */
+Jedi.prototype.jump = function() {
+  this.jumping = true;
+  return true;
+};
+
+Jedi.prototype.setHeight = function(height) {
+  this.height = height;
+};
+
+var luke = new Jedi();
+luke.jump(); // => true
+luke.setHeight(20) // => undefined
+
+/* Хорошо */
+Jedi.prototype.jump = function() {
+  this.jumping = true;
+  return this;
+};
+
+Jedi.prototype.setHeight = function(height) {
+  this.height = height;
+  return this;
+};
+
+var luke = new Jedi();
+
+luke.jump()
+  .setHeight(20);
 </code></pre>
-    </figure>
-  </div>
+        </figure>
+      </div>
 </article>
 
 <article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="html-img-sizes">Размеры картинок</h4>
-<p>
-  Изображениям <code>&lt;img&gt;</code> должны быть явно заданы с&nbsp;помощью атрибута размеры в&nbsp;пикселях или в&nbsp;процентах. В&nbsp;случае пикселей размерность не&nbsp;нужна.
-</p>
-<p>
-  По&nbsp;возможности изображениям указываются действительные размеры, так как это улучшает производительность отрисовки страницы: браузер не&nbsp;будет перерисовывать страницу в&nbsp;процессе загрузки и&nbsp;отображения изображения.
-</p>
-</div>
-  <div class="chapter-part-col gray-bgcolor">
-    <figure>
-      <pre><code class="language-markup">&lt;!-- Хорошо: размеры картинке заданы --&gt;
-&lt;div class="logo-area"&gt;
-  &lt;img src="logo.png" alt="" width="300" height="150"&gt;
-&lt;/div&gt;
+    <div class="chapter-part-col"><h4 id="js-constructors">Конструкторы</h4>
+<p>Присваивайте метод прототипу вместо замены прототипа на другой объект. Замена прототипа на другой объект делает наследование невозможным.</p>
+<p>Методы могут возвращать this для создания цепочек вызовов. Но стоит оставаться последовательным и обеспечить одинаковое поведение для всех методов, кроме геттеров.</p>
+<p>Вы можете заменить стандартный метод toString(), но убедитесь, что он работает и не вызывает побочных эффектов.</p></div>
+    <div class="chapter-part-col gray-bgcolor">
+        <figure>
+          <pre><code class="language-js">function Jedi() {
+  console.log('new jedi');
+}
 
-&lt;!-- Плохо: размеры картинке заданы в px --&gt;
-&lt;div class="logo-area"&gt;
-  &lt;img src="logo.png" alt="" width="300px" height="150px"&gt;
-&lt;/div&gt;
+/* Плохо */
+Jedi.prototype = {
+  fight: function fight() {
+    console.log('fighting');
+  },
 
-&lt;!-- Плохо: размеры картинке не заданы --&gt;
-&lt;div class="logo-area"&gt;
-  &lt;img src="logo.png" alt=""&gt;
-&lt;/div&gt;
+  block: function block() {
+    console.log('blocking');
+  }
+};
+
+/* Хорошо */
+Jedi.prototype.fight = function fight() {
+  console.log('fighting');
+};
+
+Jedi.prototype.block = function block() {
+  console.log('blocking');
+};
+
+
+
+/* Плохо */
+Jedi.prototype.jump = function() {
+  this.jumping = true;
+  return true;
+};
+
+Jedi.prototype.setHeight = function(height) {
+  this.height = height;
+};
+
+var luke = new Jedi();
+luke.jump(); // => true
+luke.setHeight(20) // => undefined
+
+/* Хорошо */
+Jedi.prototype.jump = function() {
+  this.jumping = true;
+  return this;
+};
+
+Jedi.prototype.setHeight = function(height) {
+  this.height = height;
+  return this;
+};
+
+var luke = new Jedi();
+
+luke.jump()
+  .setHeight(20);
 </code></pre>
-    </figure>
-  </div>
+        </figure>
+      </div>
 </article>
 
 <article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="html-language">Атрибут языка</h4>
-<p>
-  Для элемента <code>&lt;html&gt;</code> в&nbsp;атрибуте <code>lang</code> должен указываться соответствующий язык документа. Это помогает инструментам синтеза речи определить, какое использовать произношение или системам перевода, какие использовать языковые правила.
-</p>
-</div>
-  <div class="chapter-part-col gray-bgcolor">
-    <figure>
-      <pre><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ru"&gt;
-  &lt;head&gt;…&lt;/head&gt;
-  &lt;body&gt;…&lt;/body&gt;
-&lt;/html&gt;
+    <div class="chapter-part-col"><h4 id="js-events">События</h4>
+<p>Подключая набор данных к событиям (как DOM-событиям, так и js-событиям, например, в Backbone), передавайте объект вместо простой переменной. Это позволяет в процессе всплытия событий добавлять к данному объекту дополнительную информацию.</p></div>
+    <div class="chapter-part-col gray-bgcolor">
+        <figure>
+          <pre><code class="language-js">/* Плохо */
+$(this).trigger('listingUpdated', listing.id);
+
+...
+
+$(this).on('listingUpdated', function(e, listingId) {
+     //делаем что-нибудь с listing, например:
+     listing.name = listings[listingId]
+});
+
+
+/* Хорошо */
+$(this).trigger('listingUpdated', { listingId : listing.id });
+
+...
+
+$(this).on('listingUpdated', function(e, data) {
+  // делаем что-нибудь с data.listingId
+});
 </code></pre>
-    </figure>
-  </div>
+        </figure>
+      </div>
 </article>
 </section>
 
-      <section class="chapter">
-        <h2>CSS</h2><article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="css-syntax">Синтаксис</h4>
-<ul>
-  <li>После значения свойства обязательно ставится точка с&nbsp;запятой.</li>
-  <li>Для отступов внутри правил используются два пробела. Для правильного форматирования используйте файл <a href="https://github.com/htmlacademy/codeguide/blob/master/.editorconfig" target="_blank">.editorconfig</a> в&nbsp;вашем редакторе.</li>
-  <li>Шестнадцатеричное значение цвета не&nbsp;сокращается, а&nbsp;пишется полностью из&nbsp;всех шести символов. Для записи используются строчные буквы. Например, <code>#f5f5f5</code>.</li>
-  <li>Названия тегов и&nbsp;свойств в&nbsp;правилах пишутся строчными буквами.</li>
-  <li>Начальный ноль для значений не&nbsp;сокращается (например, <code>.5</code> вместо <code>0.5</code>).</li>
-  <li>Во&nbsp;всех случаях в&nbsp;стилях используются двойные кавычки. В&nbsp;необязательных случаях кавычки не&nbsp;опускаются.</li>
-  <li>После двоеточия в&nbsp;правилах ставится один пробел (<code>top:&nbsp;10px;</code>). А&nbsp;перед двоеточием пробел не&nbsp;нужен.</li>
-  <li>После запятых внутри значений <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code> или <code>rect()</code> пробелы ставятся. Это повышает удобочитаемость.</li>
-  <li>До&nbsp;и&nbsp;после комбинатора между селекторами (например, <code>p&nbsp;&gt;&nbsp;a</code>) ставится один пробел.</li>
-  <li>Каждое объявление в&nbsp;правиле пишется на&nbsp;новой строке.</li>
-  <li>Перед открывающейся фигурной скобкой ставится один пробел. После скобки запись идёт с&nbsp;новой строки:
-<pre class="language-css"><code>.selector {
-  color: #f5f5f5;
-}
-</code></pre></li>
-  <li>Закрывающая фигурная скобка пишется на&nbsp;новой строке и&nbsp;без отступа. Следующее после этого правило отделяется пустой строкой.</li>
-  <li>Единицы измерения не&nbsp;пишутся, там где в&nbsp;них нет необходимости. Например, <code>border:&nbsp;0</code>.</li>
-  <li>Для автоматического применения этих правил используйте файл конфигурации <a href="https://github.com/htmlacademy/codeguide/blob/master/csscomb.json" target="_blank">csscomb.json</a> для настройки <a href="http://csscomb.com" target="_blank">CSSComb</a>.</li>
-</ul>
+    <section class="chapter">
+        <h2>jQuery</h2><article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="jquery-variables">Наименование переменных</h4>
+<p>Для jQuery-переменных используйте префикс $.</p>
 </div>
   <div class="chapter-part-col gray-bgcolor">
     <figure>
-      <pre><code class="language-css">/* Хорошо */
-.selector,
-.selector-secondary,
-.selector[type="text"] {
-  padding: 15px;
-  margin-bottom: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 1px 2px #cccccc, inset 0 1px 0 #ffffff;
+      <pre><code class="language-js">/* Плохо */
+var sidebar = $('#sidebar');
+
+/* Хорошо */
+var $sidebar = $('#sidebar');</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="jquery-cache">Кэширование запросов</h4>
+<p>Кэшируйте jQuery-запросы. Каждый новый jQuery-запрос делает повторный поиск по DOM-дереву, и приложение начинает работать медленнее..</p>
+</div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-js">/* Плохо */
+function setSidebar() {
+  $('#sidebar').hide();
+
+  // ...код...
+
+  $('#sidebar').css({
+    backgroundColor: 'pink'
+  });
 }
+
+/* Хорошо */
+function setSidebar() {
+  var $sidebar = $('#sidebar');
+  $sidebar.hide();
+
+  // ...код...
+
+  $sidebar.css({
+    backgroundColor: 'pink'
+  });
+}</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="jquery-search-elements" xmlns="http://www.w3.org/1999/html">Поиск элементов</h4>
+<p>Для DOM-запросов используйте классический каскадный CSS-синтаксис <span class="text-bold">$('.sidebar ul')</span> или родитель  потомок <span class="text-bold">$('.sidebar > ul')</span></p>
+<p>Используйте <span class="text-bold">find</span> для поиска внутри DOM-объекта.</p>
+<p>Для поиска одного элемента используйте только идентификатор <span class="text-bold">#id</span></p>
+<p>Для поиска нескольких элементов однотипных по функционалу используйте класс с префиксом <span class="text-bold">.js-*</span> (для разделения названия класса использовать только дефис -), а не класс для стилизации элемента, название класса должно быть небольшим, но и понятным.</p></div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-js">/* Плохо */
+$('ul', '#sidebar').hide();
 
 /* Плохо */
-.selector, .selector-secondary, .selector[type=text]{
-  padding:15px;
-  margin:0px 0px 15px;
-  background-color:rgba(0,0,0,.5);
-  box-shadow:0px 1px 2px #CCC,inset 0 1px 0 #FFFFFF}
-</code></pre>
-    </figure>
-  </div>
-</article>
+$('#sidebar').find('ul').hide();
 
-<article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="css-order">Порядок свойств</h4>
-<p>
-  Объявления логически связанных свойств группируются в&nbsp;следующем порядке:
-</p>
-<ol>
-  <li>Позиционирование</li>
-  <li>Блочная модель</li>
-  <li>Типографика</li>
-  <li>Оформление</li>
-  <li>Анимация</li>
-  <li>Разное</li>
-</ol>
-<p>
-  Позиционирование следует первым потому, что оно влияет на&nbsp;положение блоков в&nbsp;потоке документа. Блочная модель идёт следующей, так как она определяет размеры и&nbsp;расположение блоков.
-</p>
-<p>
-  Все остальные объявления, которые изменяют вид внутренних частей блоков и&nbsp;не&nbsp;оказывают влияния на&nbsp;другие блоки, идут в&nbsp;последнюю очередь.
-</p>
-<p>
-  Сгруппированные объявления в&nbsp;правиле отделяются друг от&nbsp;друга пустой строкой.
-</p>
-<p>
-  Порядок объявления подробных правил, таких как <code>font-size</code>, <code>font-family</code>, <code>line-height</code>, должен соответствовать порядку в&nbsp;сокращённой версии правила. В&nbsp;случае совместного использования подробных и&nbsp;сокращённых правил, первой должна идти сокращённая версия.
-</p>
-</div>
-  <div class="chapter-part-col gray-bgcolor">
-    <figure>
-      <pre><code class="language-css">.declaration-order {
-  /* Позиционирование */
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
+/* Хорошо */
+$('#sidebar ul').hide();
 
-  /* Блочная модель */
-  display: block;
-  float: right;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  padding: 10px;
+/* Хорошо */
+$('#sidebar > ul').hide();
 
-  /* Типографика */
-  font: normal 13px/1.5 "Arial", sans-serif;
-  font-style: normal;
-  font-size: 13px;
-  line-height: 1.5;
-  font-family: "Arial", sans-serif;
-  text-align: center;
+/* Хорошо */
+$sidebar.find('ul').hide();
 
-  /* Оформление */
-  color: #333333;
-  background-color: #f5f5f5;
-  border: 1px solid #e5e5e5;
-  border-radius: 3px;
-  opacity: 1;
 
-  /* Анимация */
-  transition: color 1s;
-
-  /* Разное */
-  will-change: auto;
-}
-</code></pre>
-    </figure>
-  </div>
-</article>
-
-<article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="css-class-names">Имена классов</h4>
-<ul>
-  <li>Имена классов пишутся строчными буквами, используется дефис (но&nbsp;не&nbsp;знаки нижнего подчёркивания или camelCase). Дефисы служат разделителями во&nbsp;взаимосвязанных классах (например, <code>.button</code> и <code>.button-danger</code>).</li>
-  <li>Имена классов должны быть такими, чтобы по&nbsp;ним можно было быстро понять какому элементу страницы задан класс: избегайте сокращений (единственное исключение&nbsp;&mdash; <code>.btn</code> для кнопок), но&nbsp;не&nbsp;делайте их&nbsp;слишком длинными (более трёх слов).</li>
-  <li>Для написания классов используются английские слова и&nbsp;термины. Транслитом названия классов и&nbsp;атрибутов не&nbsp;пишутся.</li>
-</ul>
-</div>
-  <div class="chapter-part-col gray-bgcolor">
-    <figure>
-      <pre><code class="language-css">/* Хорошо */
-.alert-danger { … }
-.tweet .user-picture { … }
-.button { … }
-.layout-center { … }
 
 /* Плохо */
-.testElement { … }
-.t { … }
-.big_red_button { … }
-.knopka { … }
+$('.menu button');
+
+/* Плохо */
+$('.menu button#menuToggler');
+
+/* Плохо */
+$('button#menuToggler');
+
+/* Хорошо */
+$('#menuToggler');
+
+
+
+/* Плохо */
+$('.navbar-menu__item');
+
+/* Плохо */
+$('.js-navbar-menu__item');
+
+/* Хорошо */
+$('.js-nav-link');
 </code></pre>
     </figure>
   </div>
 </article>
 
 <article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="css-import">Правило <code>@import</code></h4>
-<p>
-  Правило <code>@import</code> работает медленнее, чем тег <code>&lt;link&gt;</code>. В&nbsp;стилях <code>@import</code> не&nbsp;должен использоваться.
+    <div class="chapter-part-col"><h4 id="jquery-events">jQuery события</h4>
+<p>Для задания обработчика элементу используйте метод <span class="text-bold">.on()</span> </p>
+</div>
+    <div class="chapter-part-col gray-bgcolor">
+        <figure>
+          <pre><code class="language-js">/* Плохо */
+$input
+  .click(function () { /* ... */ })
+  .focus(function () { /* ... */ })
+  .blur(function () { /* ... */ });
+
+/* Хорошо */
+$input
+  .on('click', function () { /* ... */ })
+  .on('focus', function () { /* ... */ })
+  .on('blur', function () { /* ... */ });
+
+/* Лучше */
+// Несколько событий разделяются пробелами
+$field.on('click focus', function () { /* ... */ });
+
+$input.on({
+  // Несколько событий разделяются пробелами
+  'click focus': function () { /* ... */ },
+  blur: function () { /* ... */ }
+});</code></pre>
+        </figure>
+      </div>
+</article></section>
+
+    <section class="chapter">
+        <h2>Git</h2><article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="git-branch-naming">Наименование веток</h4>
+<p>Наименование веток производить по следующему принципу:</p>
+<p><span class="text-bold">type/task-number/task-short-title</span>, где</p>
+<p><span class="text-bold">type</span> - тип выполняемой задачи. Может быть
+    <ul>
+        <li>feat - новая фича;</li>
+        <li>fix - багофикс;</li>
+        <li>docs - изменения в документации;</li>
+        <li>style - форматирование кода или любые другие изменения, не влияющие на работу кода;</li>
+        <li>refactor - изменения в коде, которые не относятся к фиксам или фиче;</li>
+        <li>test - добавлен или обновлён тест;</li>
+        <li>chore - измененения в сборщике, зависимостях и т.п.</li>
+    </ul>
 </p>
+<p><span class="text-bold">task-number</span> - номер выполняемой задачи в Accunote</p>
+<p><span class="text-bold">task-short-title</span> - краткое наименование задачи</p>
+
+
+
 </div>
   <div class="chapter-part-col gray-bgcolor">
     <figure>
-      <pre><code class="language-markup">&lt;!-- Хорошо: подключение тегом link --&gt;
-&lt;link rel="stylesheet" href="module.css"&gt;
+      <pre><code class="language-js">/* Плохо */
+shitty-shit
+shitty/shit
+shitty_shit
 
-&lt;!-- Плохо --&gt;
-&lt;style&gt;
-  @import url("module.css");
-&lt;/style&gt;
-</code></pre>
-    </figure>
-  </div>
-</article>
-
-<article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="css-font-variant">Варианты шрифта</h4>
-<p>
-  Альтернативные варианты шрифта и&nbsp;тип семейства указываются в&nbsp;конце перечисления <code>font-family</code>.
-</p>
-<p>
-  В&nbsp;случае использования нестандартных шрифтов альтернативный веб-безопасный шрифт и&nbsp;тип семейства указываются, чтобы в&nbsp;случае отсутствия нестандартного шрифта в&nbsp;системе, изменения внешнего вида страницы были минимальны. Альтернативный шрифт должен быть такого&nbsp;же типа, что и&nbsp;нестандартный.
-</p>
-<p>
-  Порядок шрифтов следующий:
-</p>
-<ol>
-  <li>нестандартный шрифт;</li>
-  <li>веб-безопасный;</li>
-  <li>тип шрифта.</li>
-</ol>
-<p>
-  Список веб-безопасных шрифтов можно посмотреть здесь&nbsp;&mdash; <a href="http://www.cssfontstack.com" target="_blank">cssfontstack.com</a>.
-</p>
-</div>
-  <div class="chapter-part-col gray-bgcolor">
-    <figure>
-      <pre><code class="language-css">/* Хорошо: указан альтернативный веб-безопасный шрифт и его тип семейства */
-body {
-  font-family: "Helvetica", "Arial", sans-serif;
-}
-
-/* Кому-то нравится Arial, кому-то Tahoma */
-body {
-  font-family: "Helvetica", "Tahoma", sans-serif;
-}
-
-/* Плохо: указан только нестандартный шрифт */
-body {
-  font-family: "Helvetica";
-}
-
-/* Плохо: указан только нестандартный шрифт и тип семейства, альтернативный веб-безопасный шрифт отсутствует */
-body {
-  font-family: "Helvetica", sans-serif;
-}
-
-/* Плохо: Georgia — шрифт с засечками, а нестандартный шрифт — без засечек */
-body {
-  font-family: "Helvetica", "Georgia", sans-serif;
-}
-</code></pre>
+/* Хорошо */
+fix/666/shit
+feature/777/breakdowns
+style/222/sidebar</code></pre>
     </figure>
   </div>
 </article>
 </section><footer>
   <div class="contacts">
     <a class="logo-full" href="https://htmlacademy.ru">
-      <img src="img/logo-full.svg" width="161" height="55" alt="HTML Academy" title="HTML Academy">
+      <img src="/img/logo.png" width="161" height="55" alt="HTML Academy" title="HTML Academy">
     </a>
-    <div class="social-icons">
-      <a class="icon icon-vk" href="https://vk.com/htmlacademy" target="_blank">
-        Вконтакте
-      </a>
-      <a class="icon icon-fb" href="https://www.facebook.com/htmlacademy" target="_blank">
-        Facebook
-      </a>
-      <a class="icon icon-tw" href="https://twitter.com/htmlacademy_ru" target="_blank">
-        Twitter
-      </a>
-      <a class="icon icon-ig" href="https://instagram.com/htmlacademy" target="_blank">
-        Instagram
-      </a>
-    </div>
-    <div class="github">
-      <a class="github-link" href="https://github.com/htmlacademy" target="_blank">
-        GitHub
-      </a>
-    </div>
   </div>
 </footer>
 </main>
 
-    <script src="js/app.js"></script>
-  </body>
+<script src="/js/app.js"></script>
+</body>
 </html>
