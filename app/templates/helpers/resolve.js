@@ -22,5 +22,6 @@ module.exports = function(url) {
     url = file.replace(root, '');
   }
 
+  url = url.replace(/^[/]{1}/, '');
   return url;
 };

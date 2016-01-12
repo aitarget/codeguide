@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Стиль кода Aitarget</title>
+    <title>Aitarget Codestyle</title>
     <link rel="stylesheet" href="{{resolve 'style.css'}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -10,23 +10,20 @@
 
 <main>
     {{~> header ~}}
-
     <section class="chapter">
         <h2>Оглавление</h2>
         <article class="chapter-part">
             <div class="chapter-part-col">
                 <h4>Jade</h4>
                 <ul>
-                    <li><a href="#jade-classes-ids">Классы и идентификаторы пишутся в начале</a></li>
+                    <li><a href="#jade-classes-ids">Классы и идентификаторы</a></li>
                     <li><a href="#jade-comments">Комментарии</a></li>
                     <li><a href="#jade-inline-elements">Строчные элементы</a></li>
                     <li><a href="#jade-linewrapping">Перенос строки для однотипных блоков</a></li>
                     <li><a href="#jade-long-lines">Длинные строки</a></li>
-                    <li><a href="#jade-mixins">Пиши меньше, делай больше</a></li>
-                    <li><a href="#jade-number-values">Числовые значения в аттрибутах</a></li>
                     <li><a href="#jade-several-attributes">Несколько аттрибутов</a></li>
                     <li><a href="#jade-single-attributes">Одиночные аттрибуты</a></li>
-                    <li><a href="#jade-single-quotes">Одиночные кавычки</a></li>
+                    <li><a href="#jade-quotes">Кавычки</a></li>
                     <li><a href="#jade-unnecessary-attributes">Необязательные аттрибуты</a></li>
                     <li><a href="#jade-include-partials">Подключение шаблонов</a></li>
                     <li><a href="#jade-useful-links">Полезные ссылки</a></li>
@@ -38,12 +35,9 @@
                     <li><a href="#stylus-syntax">Синтаксис</a></li>
                     <li><a href="#stylus-indentation">Отступы</a></li>
                     <li><a href="#stylus-space-classes">Отступы между классами</a></li>
-                    <li><a href="#stylus-unnecessary-symbols">Использование ненужных символов</a></li>
-
-                    <li><a href="#stylus-one-block">Один файл - один блок</a></li>
+                    <li><a href="#stylus-one-block">Один файл - один компонент</a></li>
                     <li><a href="#stylus-mixins-blocks">Свойства в примесях</a></li>
                     <li><a href="#stylus-total">Итого</a></li>
-
                     <li><a href="#stylus-variables">Переменные</a></li>
                     <li><a href="#stylus-problems">Возможные проблемы и пути их решения</a></li>
                     <li><a href="#stylus-general-recomendations">Общие рекомедации</a></li>
@@ -75,13 +69,17 @@
             <div class="chapter-part-col">
                 <h4>Angular</h4>
                 <ul>
-                    <li><a href="#css-syntax">Структура папок</a></li>
+                    <li><a href="#angular-files-structure">Структура файлов</a></li>
+                    <li><a href="#angular-files-naming">Наименование файлов, папок и сущностей Angular</a></li>
+                    <li><a href="#angular-helpers">Встроенные хэлперы Angular</a></li>
+                    <li><a href="#angular-general-recomendations">Общие рекомендации</a></li>
                 </ul>
             </div>
             <div class="chapter-part-col">
                 <h4>Git</h4>
                 <ul>
                     <li><a href="#git-branch-naming">Наименование веток</a></li>
+                    <li><a href="#git-commit-writing">Написание коммитов</a></li>
                 </ul>
             </div>
         </article>
@@ -107,6 +105,12 @@
     <section class="chapter">
         <h2>jQuery</h2>
         {{~> jquery/jquery-rules ~}}
+    </section>
+
+    <section class="chapter">
+        <h2>Angular</h2>
+        {{~> angular/angular-rules ~}}
+        {{~> angular/angular-recomendations ~}}
     </section>
 
     <section class="chapter">
