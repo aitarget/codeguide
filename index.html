@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Стиль кода Aitarget</title>
+    <title>Aitarget Codestyle</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -12,7 +12,7 @@
   <a href="http://www.aitarget.ru" target="_blank">
     <img class="logo" src="img/logo.png" width="300" height="300" alt="Aitarget" title="Aitarget">
   </a>
-  <h1>Стиль кода Aitarget</h1>
+  <h1>Aitarget Codestyle</h1>
   <p><a href="https://github.com/aitarget/codeguide">github.com/aitarget/codeguide</a></p>
 </header>
 <section class="chapter">
@@ -21,16 +21,14 @@
             <div class="chapter-part-col">
                 <h4>Jade</h4>
                 <ul>
-                    <li><a href="#jade-classes-ids">Классы и идентификаторы пишутся в начале</a></li>
+                    <li><a href="#jade-classes-ids">Классы и идентификаторы</a></li>
                     <li><a href="#jade-comments">Комментарии</a></li>
                     <li><a href="#jade-inline-elements">Строчные элементы</a></li>
                     <li><a href="#jade-linewrapping">Перенос строки для однотипных блоков</a></li>
                     <li><a href="#jade-long-lines">Длинные строки</a></li>
-                    <li><a href="#jade-mixins">Пиши меньше, делай больше</a></li>
-                    <li><a href="#jade-number-values">Числовые значения в аттрибутах</a></li>
                     <li><a href="#jade-several-attributes">Несколько аттрибутов</a></li>
                     <li><a href="#jade-single-attributes">Одиночные аттрибуты</a></li>
-                    <li><a href="#jade-single-quotes">Одиночные кавычки</a></li>
+                    <li><a href="#jade-quotes">Кавычки</a></li>
                     <li><a href="#jade-unnecessary-attributes">Необязательные аттрибуты</a></li>
                     <li><a href="#jade-include-partials">Подключение шаблонов</a></li>
                     <li><a href="#jade-useful-links">Полезные ссылки</a></li>
@@ -42,12 +40,9 @@
                     <li><a href="#stylus-syntax">Синтаксис</a></li>
                     <li><a href="#stylus-indentation">Отступы</a></li>
                     <li><a href="#stylus-space-classes">Отступы между классами</a></li>
-                    <li><a href="#stylus-unnecessary-symbols">Использование ненужных символов</a></li>
-
-                    <li><a href="#stylus-one-block">Один файл - один блок</a></li>
+                    <li><a href="#stylus-one-block">Один файл - один компонент</a></li>
                     <li><a href="#stylus-mixins-blocks">Свойства в примесях</a></li>
                     <li><a href="#stylus-total">Итого</a></li>
-
                     <li><a href="#stylus-variables">Переменные</a></li>
                     <li><a href="#stylus-problems">Возможные проблемы и пути их решения</a></li>
                     <li><a href="#stylus-general-recomendations">Общие рекомедации</a></li>
@@ -79,13 +74,17 @@
             <div class="chapter-part-col">
                 <h4>Angular</h4>
                 <ul>
-                    <li><a href="#css-syntax">Структура папок</a></li>
+                    <li><a href="#angular-files-structure">Структура файлов</a></li>
+                    <li><a href="#angular-files-naming">Наименование файлов, папок и сущностей Angular</a></li>
+                    <li><a href="#angular-helpers">Встроенные хэлперы Angular</a></li>
+                    <li><a href="#angular-general-recomendations">Общие рекомендации</a></li>
                 </ul>
             </div>
             <div class="chapter-part-col">
                 <h4>Git</h4>
                 <ul>
                     <li><a href="#git-branch-naming">Наименование веток</a></li>
+                    <li><a href="#git-commit-writing">Написание коммитов</a></li>
                 </ul>
             </div>
         </article>
@@ -93,19 +92,19 @@
 
     <section class="chapter">
         <h2>Jade</h2><article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="jade-classes-ids">Классы и идентификаторы пишутся в начале</h4>
-<p>Классы и идентификаторы пишутся в начале, а не в атрибутах. Указывать тег <span class="text-bold">div</span> не нужно, т.к. он используется по умолчанию.</p></div>
+  <div class="chapter-part-col"><h4 id="jade-classes-ids">Классы и идентификаторы</h4>
+<p>Классы и идентификаторы пишутся в аттрибутах, а не в начале. Это позволяет улучшить читаемость и сохранить однообразие кода.</p></div>
   <div class="chapter-part-col gray-bgcolor">
     <figure>
       <pre><code class="language-jade">/* Плохо */
-div(class='carousel' id="carousel")
-nav(class='nav nav_pos_left')
-div(id="carousel")
-
-/* Хорошо */
 .carousel
 nav.nav.nav_pos_left
-#carousel</code></pre>
+#carousel
+
+/* Хорошо */
+div(class='carousel' id="carousel")
+nav(class='nav nav_pos_left')
+div(id="carousel")</code></pre>
     </figure>
   </div>
 </article>
@@ -125,15 +124,15 @@ input.input-text(type='text' name='project' value='csssr' required)</code></pre>
 </article>
 
 <article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="jade-single-quotes">Одинарные кавычки</h4>
-<p>Используйте одинарные кавычки для текстовых значений.</p></div>
+  <div class="chapter-part-col"><h4 id="jade-quotes">Кавычки</h4>
+<p>Используйте двойные кавычки для текстовых значений.</p></div>
   <div class="chapter-part-col gray-bgcolor">
     <figure>
       <pre><code class="language-jade">/* Плохо */
-input.input-text(type="text" name="project" value="csssr" required)
+input.input-text(type='text' name='project' value='csssr' required)
 
 /* Хорошо */
-input.input-text(type='text' name='project' value='csssr' required)
+input.input-text(type="text" name="project" value="csssr" required)
 </code></pre>
     </figure>
   </div>
@@ -163,20 +162,6 @@ input.input-checkbox(type='checkbox' checked name='browser[]' value='chrome')
 
 /* Хорошо */
 input.input-checkbox(type='checkbox' name='browser[]' value='chrome' checked)</code></pre>
-    </figure>
-  </div>
-</article>
-
-<article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="jade-number-values">Числовые значения в аттрибутах</h4>
-<p>Для числовых значений кавычки не нужны.</p></div>
-  <div class="chapter-part-col gray-bgcolor">
-    <figure>
-      <pre><code class="language-jade">/* Плохо */
-input.input-text(type="text" name="price" value="24999")
-
-/* Хорошо */
-input.input-text(type='text' name='price' value=24999)</code></pre>
     </figure>
   </div>
 </article>
@@ -278,38 +263,6 @@ meta(name='msthemecompatible' content='no')
 &lt;!--noindex--&gt;
 Это содержимое не будет индексироваться поисковиком.
 &lt;!--/noindex--&gt;</code></pre>
-    </figure>
-  </div>
-</article>
-
-<article class="chapter-part">
-  <div class="chapter-part-col"><h4 id="jade-mixins">Пиши меньше, делай больше</h4>
-<p>Для однотипных и повторяющихся строк кода имеет смысл использовать примеси и указать только данные.</p>
-</div>
-  <div class="chapter-part-col gray-bgcolor">
-    <figure>
-      <pre><code class="language-jade">mixin tools(list)
-    ul.list
-        each item in list
-            li.list__item
-                span.mark= item[0]
-                = ' - ' + item[1]
-
-+tools([
-    ['spritesmith', 'генератор спрайтов и CSS переменных'],
-    ['imagemin', 'сжатие картинок']
-])
-
-Скомпилирует
-
-&lt;ul class="list"&gt;
-    &lt;li class="list__item"&gt;
-        &lt;span class="mark"&gt;spritesmith&lt;/span&gt; - генератор спрайтов и CSS переменных
-    &lt;/li&gt;
-    &lt;li class="list__item"&gt;
-        &lt;span class="mark"&gt;imagemin&lt;/span&gt; - сжатие картинок
-    &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
     </figure>
   </div>
 </article><article class="chapter-part">
@@ -419,29 +372,6 @@ meta(name='msthemecompatible' content='no')
 </article>
 
 <article class="chapter-part">
-    <div class="chapter-part-col"><h4 id="stylus-unnecessary-symbols">Использование ненужных символов</h4>
-<p>Опускайте использование фигурных скобок <span class="text-bold">{}</span>, двоеточий <span class="text-bold">:</span> и точек с запятыми <span class="text-bold">;</span>, в Stylus можно обходиться без них.</p></div>
-    <div class="chapter-part-col gray-bgcolor">
-        <figure>
-      <pre><code class="language-stylus">/* Плохо */
-.button {
-	position: relative;
-	font-size: 14px;
-	line-height: 1;
-	background-color: #08f;
-}
-
-/* Хорошо */
-.button
-	position relative
-	font-size 14px
-	line-height 1
-	background-color #08f</code></pre>
-        </figure>
-    </div>
-</article>
-
-<article class="chapter-part">
     <div class="chapter-part-col"><h4 id="stylus-composite-block-name">Наименование составных блоков</h4>
 <p>Не используйте <span class="text-bold">&-</span> для описания имен составных блоков. Это затрудняет их поиск.</p></div>
     <div class="chapter-part-col gray-bgcolor">
@@ -477,7 +407,9 @@ meta(name='msthemecompatible' content='no')
 
 <article class="chapter-part">
     <div class="chapter-part-col"><h4 id="stylus-one-block">Один файл - один блок</h4>
-<p>Один файл — один блок. Имя файла совпадает с именем блока. Все стили для блока должны быть описаны в этом файле. Блок не должен встречаться в других файлах.</p></div>
+<p>Один файл — один компонент. Все стили для компонента должны быть описаны в этом файле. Стили других компонентов не должны встречаться в других файлах.
+    Компонентами являются как блоки, так и элементы блоков и модификаторов (БЭМ терминология).
+</p></div>
     <div class="chapter-part-col gray-bgcolor">
         <figure>
       <pre><code class="language-stylus">/* Плохо */
@@ -503,11 +435,12 @@ meta(name='msthemecompatible' content='no')
 .project
 	// ...
 
-	&__name
-		// ...
+    &:before
+        // ...
 
-	&__before
-		// ...
+// project__name.styl
+.project__name
+	// ...
 
 // project-container.styl
 .project-container
@@ -547,79 +480,79 @@ meta(name='msthemecompatible' content='no')
 <p>Исходя из всех предыдущих получаем следующую иерархию и последовательность</p></div>
     <div class="chapter-part-col gray-bgcolor">
         <figure>
-      <pre><code class="language-stylus">// Блок
-.block
+      <pre><code class="language-stylus">// Компонент
+.component
 	// ...
 
-	// @media-примеси блока
+	// @media-примеси компонента
 	+below(640px)
 		// ...
 
-	// Псевдоэлементы блока
+	// Псевдоэлементы компонента
 	&::after
 		// ...
 
-	// Псевдоклассы блока
+	// Псевдоклассы компонента
 	&:first-child
 		// ...
 
-		// Псевдоэлементы с псевдоклассом блока
+		// Псевдоэлементы с псевдоклассом компонента
 		&::after
 			// ...
 
-	// Модификаторы блока
-	&_key_val
-		// ...
+        // Псевдоклассы компонента, влияющие на элементы
+        & .component__element
+            // ...
 
-		// Псевдоклассы модификатора блока
-		&:first-child
-			// ...
 
-		// Псевдоэлементы модификатора блока
-		&::after
-			// ...
 
-	// Элементы
-	&__element
-		// ...
+// Модификаторы компонента
+.component_val
+    // ...
 
-		// @media-примеси элемента
-		+below(640px)
-			// ...
+    // Псевдоклассы модификатора компонента
+    &:first-child
+        // ...
 
-		// Псевдоэлементы элемента
-		&::after
-			// ...
+    // Псевдоэлементы модификатора компонента
+    &::after
+        // ...
 
-		// Псевдоклассы элемента
-		&:first-child
-			// ...
+    // Модификаторы компонента, влияющие на элементы
+    & .component__element
+        // ...
 
-			// Псевдоэлементы с псевдоклассом элемента
-			&::after
-				// ...
+// Элементы
+.component__element
+    // ...
 
-		// Модификаторы элемента
-		&_key_val
-			// ...
+    // @media-примеси элемента
+    +below(640px)
+        // ...
 
-			// Псевдоклассы модификатора элемента
-			&:first-child
-				// ...
+    // Псевдоэлементы элемента
+    &::after
+        // ...
 
-			// Псевдоэлементы модификатора элемента
-			&::after
-				// ...
+    // Псевдоклассы элемента
+    &:first-child
+        // ...
 
-	// Псевдоклассы блока, влияющие на элементы
-	&:first-child &__element
-		// ...
+        // Псевдоэлементы с псевдоклассом элемента
+        &::after
+            // ...
 
-	// Модификаторы блока, влияющие на элементы
-	&_key_val &__element
-		// ...
+// Модификаторы элемента
+.component__element_val
+    // ...
 
-	// N элементов ещё...</code></pre>
+    // Псевдоклассы модификатора элемента
+    &:first-child
+        // ...
+
+    // Псевдоэлементы модификатора элемента
+    &::after
+        // ...</code></pre>
         </figure>
     </div>
 </article>
@@ -660,8 +593,9 @@ meta(name='msthemecompatible' content='no')
 
 <article class="chapter-part">
     <div class="chapter-part-col"><h4 id="stylus-general-recomendations">Общие рекомендации</h4>
-<p>Используйте примеси (mixins) для частоповторяющихся участков кода.</p>
-<p>Используйте циклы для однотипных строк с различием в значениях.</p></div>
+<p>Используйте примеси (mixins) для частоповторяющихся участков кода и переменные для повторяющихся значений, но только в пределах одного компонента.</p>
+<p>Используйте циклы для однотипных строк с различием в значениях, только если использование циклов
+    целесообразно.</p></div>
 </article>
 
 <article class="chapter-part">
@@ -846,7 +780,8 @@ function yup(name, options, args) {
 <article class="chapter-part">
   <div class="chapter-part-col"><h4 id="js-properties">Свойства</h4>
 <p>Используйте точечную нотацию для доступа к свойствам и методам.</p>
-<p>Используйте нотацию с [], когда вы получаете свойство, имя для которого хранится в переменной.</p>
+<p>Используйте нотацию с [], когда вы получаете свойство, имя для которого хранится в переменной, а также если название
+свойства содержит дефис.</p>
 </div>
   <div class="chapter-part-col gray-bgcolor">
     <figure>
@@ -860,6 +795,9 @@ var isJedi = luke['jedi'];
 
 /* Хорошо */
 var isJedi = luke.jedi;
+
+/* Если название свойства содержит дефис, то необходимо использовать нотацию с [] */
+var isJedi = luke['jedi-master'];
 
 
 var luke = {
@@ -880,7 +818,10 @@ var isJedi = getProp('jedi');</code></pre>
   <div class="chapter-part-col"><h4 id="js-variables">Переменные</h4>
 <p>Используйте одно <span class="text-bold">var</span> объявление переменных для всех переменных, и объявляйте каждую переменную на новой строке.</p>
 <p>Объявляйте переменные, которым не присваивается значение, в конце. Это удобно, когда вам необходимо задать значение одной из этих переменных на базе уже присвоенных значений.</p>
-<p>Присваивайте переменные в начале области видимости. Это помогает избегать проблем с объявлением переменных и областями видимости.</p></div>
+<p>Присваивайте переменные в начале области видимости. Это помогает избегать проблем с объявлением переменных и областями видимости.</p>
+<p>Все переменные которые явлюятся общими для всего тела функции выносите наверх, переменные относящиеся к
+отдельным функциональными частям или конструкциям (например переменные для циклов ) объявляйте рядом с этими
+функциональным частями или конструкциями.</p></div>
   <div class="chapter-part-col gray-bgcolor">
     <figure>
       <pre><code class="language-js">/* Плохо */
@@ -1654,13 +1595,140 @@ $input.on({
 </article></section>
 
     <section class="chapter">
+        <h2>Angular</h2><article class="chapter-part chapter-part_vertical">
+  <div class="chapter-part-col"><h4 id="angular-files-naming">Наименование файлов, папок и сущностей Angular</h4>
+<p>Папку, класс и html-тэг компонента называем по БЭМу.</p>
+<p>Названия модулей пишем как fba.componentName</p>
+<p>Название файлов через camelCase</p>
+<p>Основной единицей компонента (точкой входа в компонент) является директива, ее название совпадает с названием компонента.</p>
+<p>Внутри js файлов сущностей (контроллеров, сервисов, фильтров, моделей, фабрик) через camelCase название компонента + название сущности, за исключением Модели.
+(т.к. модель является сервисом, но в качестве названия сущности используем Model)</p>
+</div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-js"><img src="img/files-naming.jpg" alt="Наименование сущностей"></code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="angular-files-structure">Cтруктура файлов</h4>
+<p>В новом создаваемом компоненте должны присутствовать jade, stylus, js, spec.js, html для разработки компонента изолированно от других и быстрого его просмотра.</p>
+</div>
+  <div class="chapter-part-col gray-bgcolor"><img src="img/structure-example.jpg" alt="Стурктура компонента">
+</div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="angular-helpers">Встроенные хэлперы Angular</h4>
+<p>По возможности используйте встроенные ангулярные хэлперы.</p>
+<p>Для работы с массивами и объектами и манипуляциями элементами внутри них используйте библиотеку lodash</p>
+
+</div>
+  <div class="chapter-part-col gray-bgcolor"<ul>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.bind">angular.bind</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.bootstrap">angular.bootstrap</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.copy">angular.copy</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.element">angular.element</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.equals">angular.equals</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.extend">angular.extend</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.forEach">angular.forEach</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.fromJson">angular.fromJson</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.identity">angular.identity</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.injector">angular.injector</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.isArray">angular.isArray</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.isDate">angular.isDate</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.isDefined">angular.isDefined</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.isElement">angular.isElement</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.isFunction">angular.isFunction</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.isNumber">angular.isNumber</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.isObject">angular.isObject</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.isString">angular.isString</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.isUndefined">angular.isUndefined</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.lowercase">angular.lowercase</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.merge">angular.merge</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.module">angular.module</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.noop">angular.noop</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.reloadWithDebugInfo">angular.reloadWithDebugInfo</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.toJson">angular.toJson</a>
+    </li>
+    <li>
+        <a href="https://docs.angularjs.org/api/ng/function/angular.uppercase">angular.uppercase</a>
+    </li>
+</ul></div>
+</article><article class="chapter-part">
+    <div class="chapter-part-col"><h4 id="angular-general-recomendations">Общие рекомендации</h4>
+<ul>
+    <li>Для модификаторов используем одно слово</li>
+    <li>Каждый элемент делать в виде отдельного модуля</li>
+    <li>Данные для любых сущностей оформляются в виде модели</li>
+    <li>По умолчанию привязываем директивы к элементам или к аттрибутам. Как исключение - к классам</li>
+    <li>Наши css классы пишем в начале, а сторонние после</li>
+    <li>Если классы без стилей, то пишем с префиксом js</li>
+</ul></div>
+</article>
+
+
+
+</section>
+
+    <section class="chapter">
         <h2>Git</h2><article class="chapter-part">
   <div class="chapter-part-col"><h4 id="git-branch-naming">Наименование веток</h4>
 <p>Наименование веток производить по следующему принципу:</p>
-<p><span class="text-bold">type/task-number/task-short-title</span>, где</p>
+<p><span class="text-bold">type/task-short-title/task-number</span>, где</p>
 <p><span class="text-bold">type</span> - тип выполняемой задачи. Может быть
     <ul>
-        <li>feat - новая фича;</li>
+        <li>feature - новая фича;</li>
         <li>fix - багофикс;</li>
         <li>docs - изменения в документации;</li>
         <li>style - форматирование кода или любые другие изменения, не влияющие на работу кода;</li>
@@ -1683,9 +1751,41 @@ shitty/shit
 shitty_shit
 
 /* Хорошо */
-fix/666/shit
-feature/777/breakdowns
-style/222/sidebar</code></pre>
+fix/presets/666
+feature/breakdowns/777
+feature/breakdowns/775
+style/sidebar/222</code></pre>
+    </figure>
+  </div>
+</article>
+
+<article class="chapter-part">
+  <div class="chapter-part-col"><h4 id="git-commit-writing">Написание коммитов</h4>
+<p>Описание коммита должно отражать суть выполненных изменений,
+    не должно быть слишком коротким, но и не чересчур длинным.
+    Желательно, чтобы другой разработчик, прочитав описание коммита,
+    мог быстро понять чтобы было сделано.
+</p>
+
+
+
+
+</div>
+  <div class="chapter-part-col gray-bgcolor">
+    <figure>
+      <pre><code class="language-js">/* Плохо */
+1. Done
+
+2. Some fixes
+
+/* Хорошо */
+1. Rewrite step module. Make customizable fbaForm module. Needs to fully integrate it to application.
+
+2. Change targeting label, update campaign status in grid after change.
+
+
+
+</code></pre>
     </figure>
   </div>
 </article>
